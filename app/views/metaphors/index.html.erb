@@ -1,0 +1,52 @@
+<%= javascript_include_tag 'public' %>
+
+<% @document_title = 'The Mind is a Metaphor | Browse the Database' %>
+
+<div id="metaphor_content" class="yui-gd">
+
+	<div id="sidebar" class="yui-u first">
+		<%= render 'sidebar' %>
+	</div>
+	
+	<div class="yui-u">
+		
+		<div id="search_box">
+			
+			<% form_tag metaphors_path, :method=>:get do %>
+				<fieldset class="search">
+					<legend>&nbsp;</legend>
+					<%= label_tag :q, '' %>
+					<%= text_field_tag :q, params[:q], :class=>'q' %>
+						<% if params[:f] %>
+							<% params[:f].each do |k,values| %>
+								<% values.each do |v| %>
+									<%= hidden_field_tag "f[#{k}][]", v %>
+								<% end %>
+							<% end %>
+						<% end %>
+					<%= hidden_field_tag 'sort', 'relevance' %>
+					<%#= submit_tag 'Search'  %>
+				</fieldset>
+			<% end %>
+			 
+			<div id="searchParamsMsg">
+				<%= render 'search_params_msg' %>
+			</div>
+			
+		</div>
+		
+		
+		<% if @solr_response.total > 0 %>
+			<%= render 'search_results_header' %>
+			<%= render 'search_results' %>
+		<% end %>
+	
+		<div id="results">
+			<% if @solr_response.total > 0 %>
+				<%= render 'pagination' %>
+			<% else %>
+				Search for something...
+			<% end %>
+		</div>
+	</div>
+</div>

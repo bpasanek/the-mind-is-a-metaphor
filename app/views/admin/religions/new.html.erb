@@ -1,0 +1,14 @@
+<div class="top_nav"><%= link_to 'Back', admin_religions_path %></div>
+
+<h1>New religion</h1>
+
+<% form_for(@religion, :url => {:action => :create}) do |f| %>
+  
+  <%= render 'form_fields', :f=>f %>
+	
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<div class="bottom_nav"><%= link_to 'Back', admin_religions_path %></div>

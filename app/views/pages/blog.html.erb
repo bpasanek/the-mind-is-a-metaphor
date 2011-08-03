@@ -1,0 +1,57 @@
+<h1>Mind is a Metaphor Blog Installation</h1>
+<p>The Mind is a Metaphor blog is powered by Wordpress which is integrated into
+Rails application using Apache mod_rewrite. In order to integrate Wordpress, you
+need to set up an Apache mod_rewrite rule that routs requests to either Apache
+for Wordpress URLs or to the Rails interpretor for the rest of the site.</p>
+
+
+<h2>System Dependencies</h2>
+<p>This integration strategy requires that web traffic be served by an Apache
+HTTPD server with mod_rewrite and mod_php (with PHP 5) installed.</p>
+
+<h2>Step One: Install Wordpress</h2>
+<p>
+  Make sure you have the latest version of Wordpress (you can download it here).
+  Install Wordpress in RAILS_ROOT/public/wp.
+</p>
+
+<h2>Step Two: Modify Apache Config</h2>
+<p>
+  Once Wordpress is working, apply the Apache rewrite rules. Here's an example
+  virtual host entry that will do the trick. You will need to modify the server
+  name and paths to suite your environment.
+</p>
+
+<blockquote>
+  &lt;VirtualHost *:80&gt;
+    ServerName mindisametaphor.org
+    DocumentRoot /var/www/metaphor
+
+    &lt;Directory "/var/www/metaphor/wp"&gt;
+      Option FollowSymLinks
+      AllowOverride None
+      Order allow,deny
+      Allow from all
+    &lt;/Directory&gt;
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteRule ^/blog$ /wp/index.php [QSA]
+    RewriteRule ^(/blog.*/$)$ $1/index.php [QSA]
+    RewriteRule ^/blog/?(.*) %{DOCUMENT_ROOT}/wp/$1 [NC,QSA,L]
+
+    #Redirect all non-static requests to a single instance
+    RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_FILENAME} !-f
+
+    #Note: You will want to use a load balancer for production systems
+    RewriteRule ^/(.*)$ http://localhost:3000{REQUEST_URI} [P,QSA,L]
+
+  &lt;/VirtualHost&gt;
+</blockquote>
+
+<p><strong>NOTE: Once these rules are in place, this page of instructions
+will be replaced with Wordpress. You can still access this page of instructions
+<a href="/home/blog"here. Please follow this link, bookmark the instructions
+and continue.</strong></p>

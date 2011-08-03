@@ -1,0 +1,20 @@
+<div class="top_nav">
+	<%= link_to 'Show', admin_author_path(@author) %> |
+	<%= link_to 'Back', admin_authors_path %>
+</div>
+
+<h1>Editing author</h1>
+
+<% form_for(@author, :url => {:action => :update}) do |f| %>
+  
+  <%= render 'form_fields', :f=>f %>
+  
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<div class="bottom_nav">
+	<%= link_to 'Show', admin_author_path(@author) %> |
+	<%= link_to 'Back', admin_authors_path %>
+</div>

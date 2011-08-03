@@ -1,0 +1,24 @@
+<h3><%= link_to 'Create New', new_admin_nationality_path %></h3>
+
+<%= render 'admin/search_sort' %>
+
+<%= will_paginate @nationalities %>
+
+<table class="grid">
+	
+	<tr>
+		<th>Nationality</th>
+		<th>Action</th>
+	</tr>
+
+<% for nationality in @nationalities %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>" >
+    <td><%= nationality.name %></td>
+    <td class="record_option"><div><%= link_to 'Edit', edit_admin_nationality_path(nationality) %></div>
+	<div><%= link_to 'Destroy', admin_nationality_path(nationality), :confirm => 'Are you sure?', :method => :delete %></div></td>
+</tr>
+
+<% end %>
+</table>
+
+<%= will_paginate @nationalities %>

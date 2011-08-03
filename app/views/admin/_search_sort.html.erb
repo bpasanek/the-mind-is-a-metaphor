@@ -1,0 +1,28 @@
+<script type="text/javascript">
+$(function(){
+	$('select#sort').change(function(){
+		$('#searchForm form').submit();
+	})
+})
+</script>
+
+<% if local_assigns.include?(:sort_fields) %>
+	<% sort_opts = capture do %>
+		<% sort_fields.each do |fname| %>
+			<option value="<%= fname %>"<%= ' selected="selected" ' if params[:sort]==fname %>><%= fname.gsub('_',' ') %></option>
+		<% end %>
+	<% end %>
+<% end %>
+
+<div id="searchForm">
+	<% form_tag collection_path, :method=>:get do %>
+		<%= text_field_tag :q, params[:q] %>
+		<% unless sort_opts.nil? %>
+		sort by: <%= select_tag :sort, sort_opts %>
+		<% end %>
+		<%= submit_tag 'search' %>
+		<% if params[:q] || params[:sort] %>
+		-- <%= link_to 'clear', collection_path %>
+		<% end %>
+	<% end %>
+</div>

@@ -1,0 +1,13 @@
+<% if @previous_doc %>
+	<%= link_to '&laquo; previous', metaphors_search_item_path(params[:offset].to_i-1) %>
+<% else %>
+	&laquo; previous
+<% end %>
+
+[<%= @solr_response.params[:start].to_i + 1 %> of <%= @solr_response.total %>]
+
+<% if @next_doc %>
+	<%= link_to 'next &raquo;', metaphors_search_item_path(params[:offset].to_i+1) %>
+<% else %>
+	next -&gt;
+<% end %>

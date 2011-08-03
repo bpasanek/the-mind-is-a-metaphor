@@ -1,0 +1,54 @@
+<% if @author %>
+	 <h3><%= link_to 'Create New', new_admin_author_work_path(@author) %></h3>
+<% else %>
+	<em class="note">
+		Works can only be created by browsing to a single author
+	</em>
+<% end %>
+
+<p>
+<% if @author %>
+	Showing Works by "<%= link_to @author.name_with_dates, admin_author_path(@author) %>"
+<% else %>
+	Showing all Works
+<% end %>
+</p>
+
+<%= render 'admin/search_sort' %>
+
+<%= will_paginate @works %>
+
+<table class="grid">	
+	<tr>
+		<th>Work</th>
+		<th>Authors</th>
+		<th>Year</th>
+		<th>Action</th>
+	</tr>
+<% @works.each do |work| %>
+	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>" >
+	    <td><%= link_to truncate(work.title, :length=>100), object_path(work) %></td>
+	    <td class="record_option">
+	    	<% author_link_items = [] -%>
+ 			<% work.authors[0..1].each do |a| %>
+					<%= link_to a.name, admin_author_path(a) -%>
+				<br/>
+			<% end -%>
+			<% if work.authors[2] %>
+				<a class="expand_works_link">(more)</a>
+				<div class="expand_works_div_hidden" style="display:none">
+				<% author.works[2..-1].each_with_index do |a,index| %>
+					<%= link_to a.name, admin_author_path(a) -%>
+					<br/>
+				<% end %>
+				</div>
+			<% end %>
+	    </td>
+		<td class="record_option"><%= work.year %></td>
+	    <td class="record_option"><div><%= link_to 'Edit', edit_object_path(work) %></div>
+	    <div><%= link_to 'Destroy', object_path(work), :confirm => 'Are you sure?', :method => :delete %></div></td>
+	</tr>
+<% end %>
+</table>
+
+<%= will_paginate @works %>

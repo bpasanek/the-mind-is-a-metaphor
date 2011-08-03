@@ -1,0 +1,108 @@
+<%= f.error_messages %>
+<div style="display:table;">
+<div class="new_record_column">
+	<h2>Descriptive Information</h2>
+	
+	<%= f.hidden_field(:work_id, :value => @metaphor.work.id) if @metaphor.work %>
+	
+	<div>
+		<label>Metaphor:</label>
+		<%= f.text_area :metaphor, :rows => 3, :cols => 36 %>
+	</div>
+	<div>
+		<label>Text:</label>
+		<%= f.text_area :text, :rows => 3, :cols => 36 %>
+	</div>
+	<div>
+		<label>Context:</label>
+		<%= f.text_area :context, :rows => 3, :cols => 36 %>
+	</div>
+	<div>
+		<label>Provenance:</label>
+		<%= f.text_area :provenance, :rows => 3, :cols => 36 %>
+	</div>
+	<div>
+		<label>Theme:</label>
+		<%= f.text_area :theme, :rows => 3, :cols => 36 %>
+	</div>
+	<div>
+		<label>Comments:</label>
+		<%= f.text_area :comments, :rows => 3, :cols => 36 %>
+	</div>
+	<div>
+		<label>Dictionary:</label>
+		<%= f.text_area :dictionary, :rows => 3, :cols => 36 %>
+	</div>
+	<div>
+		<label>Reviewed On:</label>
+		<%= f.text_field :reviewed_on %>
+		<em class="elementNote">required format: YYYY-MM-DD</em>
+	</div>
+</div>
+
+<div class="new_record_column">
+	<h2>Categories</h2>
+	<p>A value can represent a single term or a hierarchy of terms. When specifying a hierarchy, please use <em>::</em> to separate each term in the hierarchy.</p>
+		
+	<div id="categoryList">
+		<% f.fields_for :categories do |category_form| %>
+		<div>
+			<%= category_form.label :value, 'Value:' %>
+			<%= category_form.text_field :value, :size => 40 %>
+			<% unless category_form.object.new_record? -%>
+				<%#= category_form.label :_delete, 'Delete?' %>
+				<%= category_form.label :_destroy, 'Delete?' %>
+				<%#= category_form.check_box :_delete %>
+				<%= category_form.check_box :_destroy %>
+			<% end -%>
+		</div>
+		<% end %>
+	</div>
+		
+	<%
+	# this seems to be the only way to get the fields_for helper to reset the child index value
+	# UPDATE - Rails 2.3.3 FIXES THIS?
+	#f.instance_variable_set('@nested_child_index', 0)
+	-%>
+	
+	<%= button_to_function "Add another", "addAnotherMetaphorCategory()" %>
+	
+	<br/>
+	<br/>
+	<hr/>
+	<br/>
+	
+	<h2>Metaphor Types</h2>
+	<p>Allows for classifying the text of the metaphor. For example, you could identify the test as Simile, Personification, Metaphor, etc.</p>
+	
+	<div id="typeList">
+		<% f.fields_for :types do |type_form| %>
+			<div>
+			<%= type_form.label :name, 'Value:' %>
+			<%= type_form.text_field :name, :size => 40 %>
+			<% unless type_form.object.new_record? -%>
+				<%#= type_form.label :_delete, 'Delete?' %>
+				<%= type_form.label :_destroy, 'Delete?' %>
+				<%#= type_form.check_box :_delete %>
+				<%= type_form.check_box :_destroy %>
+			<% end -%>
+			</div>
+		<% end %>
+	</div>
+	
+	<%= button_to_function "Add another", "addAnotherMetaphorType()" %>
+	
+</div>
+</div>
+		<br/>
+	<!-- Display the dates for informational purposes; the system will automatically populate them -->
+<hr/>
+<div>
+	<% if @metaphor.created_at -%>
+		Record created on <%= @metaphor.created_at %><br/>
+	<% end -%>
+	<% if @metaphor.updated_at -%>
+		Record last updated on <%= @metaphor.updated_at %><br/>
+	<% end -%>
+</div>
+

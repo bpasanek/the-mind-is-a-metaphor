@@ -1,0 +1,10 @@
+protestant:
+  name: 'Protestant'
+
+catholicism:
+  grouping: 'All Catholicism'
+  name: 'Roman Catholic'
+
+anglican:
+  grouping: 'All Anglican'
+  name: 'Anglican'

@@ -1,0 +1,9 @@
+<% # Display the dates for informational purposes; the system will automatically populate them -%>
+<div id="createdUpdatedAt">
+	<% if @object.created_at -%>
+		Record created on <%= @object.created_at %><br/>
+	<% end -%>
+	<% if @object.updated_at -%>
+		Record last updated on <%= @object.updated_at %><br/>
+	<% end -%>
+</div>

@@ -1,0 +1,42 @@
+<script type="text/javascript">
+$(function(){
+	//$('#sortOrderSelect').hide();
+	$('#sortOrderSelect').change(function(){
+		$('#resultsForm').submit();
+	});
+	$('#sortBy').click(function(){
+		$(this).hide();
+		$('#sortOrderSelect').show().focus();
+		return false;
+	});
+})
+</script>
+
+
+<form id="resultsForm" action="<%= metaphors_path %>">
+	
+	<%= hidden_field_tag(:q, params[:q]) unless params[:q].blank? %>
+	<% params[:f].each_pair do |k,v| %>
+		<%= hidden_field_tag "f[#{k}][]", v %>
+	<% end if params[:f] %>
+	
+	<div id="resultsHeader" class="container">
+		<div class="left half">
+			page <%= h @solr_response.docs.current_page %> of <%= h @solr_response.docs.total_pages %>
+			&nbsp;&nbsp;&nbsp;
+			per page:
+			<select name="per_page" id="perPageSelect">
+				<%= options_for_per_page %>
+			</select>
+		</div>
+		
+		<div class="right half rightText">
+			sorted by: <select name="sort" id="sortOrderSelect">
+				<%= options_for_sort %>
+			</select>
+		</div>
+	</div>
+	
+	
+	
+</form>

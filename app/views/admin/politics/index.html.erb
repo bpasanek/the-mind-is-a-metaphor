@@ -1,0 +1,26 @@
+<h3><%= link_to 'Create New', new_admin_politic_path %></h3>
+
+<%= render 'admin/search_sort' %>
+
+<%= will_paginate @politics %>
+
+<table class="grid">
+	
+	<tr>
+		<th>Politic</th>
+		<th>Grouping</th>
+		<th>Action</th>
+	</tr>
+
+<% for politic in @politics %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>" >
+    <td><%= politic.name %></td>
+    <td class="record_option"><%= politic.grouping %></td>
+    <td class="record_option"><div><%= link_to 'Edit', edit_admin_politic_path(politic) %></div>
+    <div><%= link_to 'Destroy', admin_politic_path(politic), :confirm => 'Are you sure?', :method => :delete %></div></td>
+</tr>
+
+<% end %>
+</table>
+
+<%= will_paginate @politics %>

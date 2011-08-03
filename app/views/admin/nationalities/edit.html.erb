@@ -1,0 +1,16 @@
+<div class="top_nav"><%= link_to 'Show', admin_nationality_path(@nationality) %> |
+<%= link_to 'Back', admin_nationalities_path %></div>
+
+<h1>Editing nationality</h1>
+
+<% form_for(@nationality, :url => {:action => :update}) do |f| %>
+  
+  <%= render 'form_fields', :f=>f %>
+	
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<div class="bottom_nav"><%= link_to 'Show', admin_nationality_path(@nationality) %> |
+<%= link_to 'Back', admin_nationalities_path %></div>

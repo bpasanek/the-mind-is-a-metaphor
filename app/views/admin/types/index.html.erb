@@ -1,0 +1,24 @@
+<h3><%= link_to 'Create New', new_admin_type_path %></h3>
+
+<%= render 'admin/search_sort' %>
+
+<%= will_paginate @types %>
+
+<table class="grid">	
+	<tr>
+		<th>Type</th>
+		<th>Action</th>
+	</tr>
+
+<% for type in @types %>
+ <tr class="<%= cycle('list-line-odd', 'list-line-even') %>" >
+   <td><%= link_to type.name, admin_type_path(type) %></td>
+    <td class="record_option"><div><%= link_to 'Edit', edit_admin_type_path(type) %></div>
+    <div><%= link_to 'Destroy', admin_type_path(type), :confirm => 'Are you sure?', :method => :delete %></div></td>
+</tr>
+
+
+<% end %>
+</table>
+
+<%= will_paginate @types %>

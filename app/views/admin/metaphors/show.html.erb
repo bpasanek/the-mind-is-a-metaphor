@@ -1,0 +1,94 @@
+<div class="top_nav"><%= link_to 'Edit', edit_admin_metaphor_path(@metaphor) %> |
+<%= link_to 'Back', admin_metaphors_path %></div>
+
+<% if @work %>
+	<h1>Showing Metaphor from work, "<%= link_to @work.title, admin_work_path(@work) %>"</h1>
+<% end %>
+
+<h2>Descriptive Information</h2>
+<div class="show_section">
+	
+	<div class="entry">
+		<span class="label">Work:</span>
+		<div class="description"><%= @metaphor.work ? link_to(@metaphor.work.title, admin_work_path(@metaphor.work)) : 'No Associated Work' %></div>
+	</div>
+	
+	<% if @metaphor.work and ! @metaphor.work.authors.empty? %>
+		<div class="entry">
+			<span class="label">Authors:</span>
+			<div class="description">
+				<ul>
+					<% @metaphor.work.authors.each do |author| %>
+						<li><%= link_to author.name_with_dates, admin_author_path(author) %></li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+	<% end %>
+	
+	<div class="entry">
+		<span class="label">Metaphor:</span>
+		<div class="description"><%= @metaphor.metaphor %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Text:</span>
+		<div class="description"><%= @metaphor.text %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Context:</span>
+		<div class="description"><%= @metaphor.context %></div>
+	</div>
+	<div class="entry">
+		<div class="label">Provenance:</div>
+		<div class="description"><%= @metaphor.provenance %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Theme:</span>
+		<div class="description"><%= @metaphor.theme %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Comments:</span>
+		<div class="description"><%= @metaphor.comments %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Dictionary:</span>
+		<div class="description"><%= @metaphor.dictionary %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Reviewed On:</span>
+		<div class="description"><%= @metaphor.reviewed_on %></div>
+	</div>
+</div>
+
+<h2>Categories</h2>
+<div class="show_section">
+	<% if @metaphor.categories.empty? -%>
+		<div><em>None specified</em></div>
+	<% else -%>
+		<% for category in @metaphor.categories do -%>
+			<div class="entry">
+				<span class="label">Value:</span>
+				<div class="description"><%= link_to category.value, admin_metaphors_path(:q=>category.value) %></div>
+			</div>
+		<% end -%>
+	<% end -%>
+</div>
+
+<h2>Metaphor Types</h2>
+<div class="show_section">	
+	<% if @metaphor.types.empty? -%>
+		<div><em>None specified</em></div>
+	<% else -%>
+		<% for type in @metaphor.types do -%>
+			<div class="entry">
+				<span class="label">Value:</span>
+				<div class="description"><%= type.name %></div>
+			</div>
+		<% end -%>
+	<% end -%>
+</div>
+
+<%= render 'admin/created_updated' %>
+
+<div class="bottom_nav"><%= link_to 'Edit', edit_admin_metaphor_path(@metaphor) %> |
+<%= link_to 'Back', admin_metaphors_path %></div>

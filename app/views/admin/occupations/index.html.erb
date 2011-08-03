@@ -1,0 +1,24 @@
+<h3><%= link_to 'Create New', new_admin_occupation_path %></h3>
+
+<%= render 'admin/search_sort' %>
+
+<%= will_paginate @occupations %>
+
+<table class="grid">
+	
+	<tr>
+		<th>Occupation</th>
+		<th>Action</th>
+	</tr>
+
+<% for occupation in @occupations %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>" >
+    <td><%= occupation.name %></td>
+    <td class="record_option"><div><%= link_to 'Edit', edit_admin_occupation_path(occupation) %></div>
+    <div><%= link_to 'Destroy', admin_occupation_path(occupation), :confirm => 'Are you sure?', :method => :delete %></div></td>
+</tr>
+
+<% end %>
+</table>
+
+<%= will_paginate @occupations %>

@@ -1,0 +1,376 @@
+/* 
+    Document   : home.css
+    Created on : May 18, 2009, 3:43:18 PM
+    Author     : wsg4w
+    Description:
+        Purpose of the stylesheet follows.
+	$Id$
+*/
+
+*{
+	margin: 0;
+	padding:0;
+}
+
+
+body {
+   font-family: 'Lucida Grande', Verdana, Tahoma, serif;
+   background-color: #333;
+   margin: 0;
+}
+
+blockquote {
+   background: transparent url('/images/quote.png') no-repeat scroll 0 0;
+   font-style: italic;
+   font-family: Georgia, "Times New Roman", Times ,serif;
+   line-height: 1.2em;
+   margin: 20px 0;
+   padding: 20px 20px 20px 60px;
+   padding-bottom: 2em;
+}
+
+blockquote, q {
+   /** quotes: "" ""; */
+}
+
+strong {font-weight: bold;}
+
+blockquote > p:first-child {
+  font-family: 'Lucida Grande', Verdana, Tahoma, sans-serif;
+  /**color: #64615A;*/
+  color: #A59F92;
+  font-size: 16px;
+  line-height: 1.8em;
+}
+
+p.attribution {
+    text-align: right;
+}
+
+.attribution {
+    font: 9px Verdana, Arial, sans-serif #333;
+    text-align: right;
+    margin: 0 8px 8px 8px;
+}
+
+a:link, a:visited {color: blue}
+a:hover {color: #000; text-decoration: none}
+
+h4 {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#bd { 
+	font-size: 1.1em; 
+	color: #fff;
+}
+
+#bd a, #bd a:visited {
+	color: #A59F92;
+	text-decoration: none;
+}
+
+#bd a:hover {
+	color: #fff;
+}
+
+p { padding: 5px 15px;}
+
+#hd.banner {
+	background-image: url('/images/banner_logo.jpg');
+	background-repeat: no-repeat;
+	height: 111px;
+}
+
+#nav {
+    /* background: #ccc;*/
+    margin-bottom: 20px;
+    padding: 0 1em 0.2em 0;
+    text-align: right;
+    font-size: 1.5em;
+	color: #fff;
+	float: right;
+	
+}
+
+#nav ul { display: inline; }
+
+#nav ul li {
+    display: inline;
+    padding-right: 1em;
+}
+
+#nav a:visited, #nav a{ color: #ccc; text-decoration: none; }
+
+#nav a:hover {color: #fff;}
+
+fieldset legend {
+	color: #fff;
+    border: 1px dotted gray;
+    letter-spacing: 0.5em;
+    margin-left: 1px;
+    padding: 0.2em;
+}
+
+form fieldset {
+    border: 1px solid #666;
+}
+
+.boxed {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+.license {
+	border-top: 1px solid #ccc;
+	margin-top: 10px;
+    text-align: center;
+	color:#fff;
+}
+
+.license a {
+	text-decoration: none;
+	color: #ccc;
+}
+
+.searchbox {
+	padding: 15px;
+	background-color: #292929;
+	color: #fff;
+	font-size: 90%;
+	float: right;
+	width: 65%;
+}
+
+.searchbox a {
+	text-decoration: none;
+	color: red;
+}
+
+legend {color: #000;}
+
+#results {
+    font-size:84%;
+}
+
+#record {
+    font-size: 84%;
+}
+
+#results table th, #results table td{
+    border: 1px solid #ccc;
+}
+
+#results th {
+    text-align: center;
+    background: #ccc;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#results td {
+    padding: 10px;
+}
+
+.result {
+	clear:both;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 150%;
+	padding: 10px;
+	border-left: 2px dashed #ccc;
+	border-top: 2px dashed #ccc;
+}
+
+#bd .result a:hover {
+	color: #FFCC00;
+}
+
+.pagination{
+	padding-top:5px;
+	padding-bottom:5px;
+	text-align: center;
+	margin: auto !important;
+	color: #fff;
+	font-size: 105%;
+}
+
+.pagination a{
+	text-decoration: none;
+	font-size: 90%;
+}
+
+.pagination a, .pagination a:visited {
+	color: #ccc;
+}
+
+#facets{
+	/** margin: 20px 10px 20px 0; 
+	padding: 0px;
+	font-size: 12px;
+	*/
+	font-size: 0.9em;
+	width: 100%;
+	line-height: 1.5em;
+	/**background-color: #eee;
+	border: 1px solid #ccc;*/
+}
+
+.facets-header{
+	margin: 0px; padding: 0 0 3px 3px;
+	background-color: #ccc;
+	font-weight: bold;
+}
+.list-line-even {
+	background-color: #dddddd;
+	border-color: #dddddd;
+}
+
+.list-line-odd {
+	background-color: #ffffff;
+	border-color: #ffffff;
+}
+.row {
+    float: none;
+    margin: 1em;
+}
+
+.row .first { text-align: left;}
+
+.yui-gd .yui-u.first {width: 48%;}
+
+/******* FACETS ******/
+.facet_div{
+	border-bottom: 1px solid silver;
+	margin-bottom:10px;
+	padding:5px 5px 15px 5px;
+}
+.facet_head{
+	width:100%;
+	font-weight:bold;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	font-size:90%;
+
+}
+.facet_item{
+	display:table;
+	width:100%;
+	border-bottom:1px dotted silver;
+	padding-bottom:2px;
+}
+.facet_label{
+	float:left;
+	width:90%;
+}
+.hits-remove_facet{
+	width:10%;
+	float:right;
+}
+.remove_facet{
+	width:100%;
+	display:table;
+}
+
+#metaphor {
+	color: #fff;
+}
+
+#metaphor a, #metaphor a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+#metaphor a:hover {
+	text-decoration: underline;
+}
+
+#metaphor .yui-gf{
+	padding:.3em 0;
+	border-bottom:1px dotted gray;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+#metaphor .yui-u.first{
+
+	text-align:right;
+	font-family: Verdana, arial, sans-serif;
+}
+#metaphor h3{
+	font-weight:bold;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+ul.menu, ul.menu ul {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  width: 15em;
+}
+
+ul.menu a {
+  display: block;
+  text-decoration: none;	
+}
+
+ul.menu li {
+  margin-top: 1px;
+}
+
+ul.menu li a {
+  background: #333;
+  color: #fff;	
+  padding: 0.5em;
+}
+
+ul.menu li a:hover {
+  background: #000;
+}
+
+ul.menu li ul li a {
+  background: #ccc;
+  color: #000;
+  padding-left: 20px;
+}
+
+ul.menu li ul li a:hover {
+  background: #aaa;
+  border-left: 5px #000 solid;
+  padding-left: 15px;
+}
+
+#resultsMeta{width:100%;}
+
+#resultsMeta .yui-u.first{
+    text-align:left;
+}
+
+#resultsMeta .yui-u{
+    text-align:right;
+}
+
+#showHeader{
+    margin-top:1em;
+    font-size:90%;
+}
+
+/*  used for 3-col layouts
+    the left col is left aligned
+    the center col is center aligned
+    the right col is right aligned
+*/
+.threeColSplit .yui-u{
+    text-align:right;
+}
+.threeColSplit .yui-u.first{
+    text-align:left;
+}
+.threeColSplit .yui-u.center{
+    text-align:center;
+}
+
+#resultsHeader{
+    margin-bottom:1em;
+}

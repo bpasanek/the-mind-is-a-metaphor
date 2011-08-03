@@ -1,0 +1,25 @@
+<h3><%= link_to 'Create New', new_admin_religion_path %></h3>
+
+<%= render 'admin/search_sort' %>
+
+<%= will_paginate @religions %>
+
+<table class="grid">	
+	<tr>
+		<th>Religion</th>
+		<th>Grouping</th>
+		<th>Action</th>
+	</tr>
+
+<% for religion in @religions %>
+ <tr class="<%= cycle('list-line-odd', 'list-line-even') %>" >
+    <td><%= religion.name %></div>
+    <td class="record_option"><%= religion.grouping %></div>
+    <td class="record_option"><div><%= link_to 'Edit', edit_admin_religion_path(religion) %></div>
+    <div><%= link_to 'Destroy', admin_religion_path(religion), :confirm => 'Are you sure?', :method => :delete %></div></td>
+</tr>
+
+<% end %>
+</table>
+
+<%= will_paginate @religions %>

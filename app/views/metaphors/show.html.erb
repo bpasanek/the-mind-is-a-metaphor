@@ -1,0 +1,167 @@
+
+<hr/>
+
+<%= render 'show_header' %>
+
+<div class="metaphor" id="metaphor">
+	
+	<blockquote>
+		<p><%= @metaphor.metaphor %></p>
+		<% if @metaphor.work %>
+			<% @metaphor.work.authors.uniq.each do |author| %>
+				<p class="attribution">&mdash; <%= author.name %></p>
+			<% end %>
+		<% end %>
+	</blockquote>
+	
+	<hr />
+	
+	<%# unless @metaphor.work.authors.name.blank? %>
+	<div class="yui-gf">
+		<div class="yui-u first right">
+			Author
+		</div>
+		<div class="yui-u serif">
+				<% @metaphor.work.authors.uniq.each do |author| %>
+					<h3> <%= link_to(author.name, metaphors_path(:f=>{:author_name => [author.name]})) rescue 'N/A' %></h3>
+				<% end %>
+		</div>
+	</div>
+	<%# end %>
+	
+	<% unless @metaphor.work.title.blank? %>
+	<div class="yui-gf">
+		<div class="yui-u first right">
+			Work Title
+		</div>
+		<div class="yui-u serif">
+			<h3><%= link_to(@metaphor.work.title, metaphors_path(:f=>{:work_title=>[@metaphor.work.title]})) rescue 'N/A' %></h3>
+		</div>
+	</div>
+	<% end %>
+	
+	<% unless @metaphor.work.place_of_publication.blank? %>
+	<div class="yui-gf">
+		<div class="yui-u first right ">
+			Place of Publication
+		</div>
+		<div class="yui-u serif">
+			<%= @metaphor.work.place_of_publication %>
+		</div>
+	</div>
+	<% end %>
+	
+	<% unless @metaphor.work.printer.blank? %>
+	<div class="yui-gf">
+		<div class="yui-u first right ">
+			Publisher
+		</div>
+		<div class="yui-u serif">
+			<%= @metaphor.work.printer %>
+		</div>
+	</div>
+	<% end %>
+	
+	<% unless @metaphor.work.year.blank? %>
+	<div class="yui-gf">
+		<div class="yui-u first right ">
+			Date
+		</div>
+		<div class="yui-u serif">
+			<%= @metaphor.work.year %>
+		</div>
+	</div>
+	<% end %>
+	
+	<% unless @metaphor.metaphor.blank? %>
+	<div class="yui-gf">
+		<div class="yui-u first right ">
+			Metaphor
+		</div>
+		<div class="yui-u serif">
+			<%= @metaphor.metaphor %>
+		</div>
+	</div>
+	<% end %>
+	
+	<% unless @metaphor.text.blank? %>
+	<div class="yui-gf">
+		<div class="yui-u first right">
+			Metaphor in Context
+		</div>
+		<div class="yui-u serif">
+			<%= @metaphor.text %>
+		</div>
+	</div>
+	<% end %>
+	
+	<% unless @metaphor.categories.blank? %>
+	<div class="yui-gf">
+		<div class="yui-u first right">
+			Categories
+		</div>
+		<div class="yui-u serif">
+			<% @metaphor.categories.each do |cat| %>
+				<%= link_to cat.value, metaphors_path(:f=>{:categories=>[(cat.values.first rescue nil)]}) %>
+			<% end %>
+		</div>
+	</div>
+	<% end %>
+	
+	<% unless @metaphor.provenance.blank? %>
+	<div class="yui-gf">
+		<div class="yui-u first right">
+			Provenance
+		</div>
+		<div class="yui-u serif">
+			<%= @metaphor.provenance %>
+		</div>
+	</div>
+	<% end %>
+	
+	<% unless @metaphor.work.citation.blank? %>
+	<div class="yui-gf">
+		<div class="yui-u first right">
+			Citation
+		</div>
+		<div class="yui-u serif">
+			<%= @metaphor.work.citation if @metaphor.work %>
+		</div>
+	</div>
+	<% end %>
+	
+	<% unless @metaphor.theme.blank? %>
+	<div class="yui-gf">
+		<div class="yui-u first right">
+			Theme
+		</div>
+		<div class="yui-u serif">
+			<%= @metaphor.theme %>
+		</div>
+	</div>
+	<% end %>
+
+   <% unless @metaphor.created_at.blank? %>
+	<div class="yui-gf">
+		<div class="yui-u first right">
+			Date of Entry
+		</div>
+		<div class="yui-u serif">
+			<%= (@metaphor.created_at).strftime("%m/%d/%Y") unless @metaphor.created_at.nil? %>
+		</div>
+	</div>
+	<% end %>
+
+	
+	<% unless @metaphor.reviewed_on.blank? %>
+	<div class="yui-gf">
+		<div class="yui-u first right">
+			Date of Review
+		</div>
+		<div class="yui-u serif">
+			<%= (@metaphor.reviewed_on).strftime("%m/%d/%Y") unless @metaphor.reviewed_on.nil? %>
+		</div>
+	</div>
+	<% end %>
+	
+</div>

@@ -1,0 +1,11 @@
+poet:
+  name: 'Poet'
+  
+engraver_artist_poet:
+  name: 'Engraver, Artist, and Poet'
+  
+writer:
+  name: 'Writer'
+
+poet_and_politician:
+  name: 'Poet and Politician'

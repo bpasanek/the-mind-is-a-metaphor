@@ -1,0 +1,25 @@
+first:
+  name: Marvell, Andrew
+  gender: 'Male'
+  date_of_birth: '1621'
+  date_of_death: '1678'
+  occupation: poet_and_politician
+  religion: anglican
+  politic: parliamentarian
+  nationality: english
+
+# Occupation should be 10; test to update addresses this
+second:
+  name: 'Montagu, Lady Mary Wortley'
+  gender: 'Female'
+  date_of_birth: '1689'
+  date_of_death: '1762'
+  occupation: 
+  religion: 
+  politic: whig
+  nationality: english
+  
+third:
+  name: 'Kelly, Jack'
+  gender: 'Male'
+  date_of_birth: '1962'

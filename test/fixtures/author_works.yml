@@ -1,0 +1,39 @@
+publication1:
+  author: first
+  work: Work_3752
+  
+publication2:
+  author: first
+  work: Work_3754_no_genre
+  
+publication3:
+  author: first
+  work: Work_3757
+
+publication4:
+  author: second
+  work: Work_3233
+  
+publication5:
+  author: second
+  work: Work_3399
+  
+publication6:
+  author: second
+  work: Work_4784
+  
+publication7:
+  author: second
+  work: Work_4808
+  
+publication8:
+  author: second
+  work: Work_4938
+  
+publication9:
+  author: second
+  work: Work_5303
+
+publication10:
+  author: 
+  work: 

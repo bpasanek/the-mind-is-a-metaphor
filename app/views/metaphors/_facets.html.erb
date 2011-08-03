@@ -1,0 +1,36 @@
+<ul id="menu" class="-menu -collapsible -expandfirst">
+	<% facet_fields.each do |field| %> 
+	 <% facet = @solr_response.facets.detect {|f| f.name == field} %>
+		<% next if facet.items.size < 1 %>
+		<li class="caps">
+			<%= link_to facet_label(facet.name), pages_path('facets_about') %>
+			
+			<ul class="submenu">
+				<% facet.items.each do |item| %>
+				<li>
+					<% if facet_in_params?(facet.name, item.value) %>
+		   				<div class="container">
+						<span class="left selected">
+							<%= item.value %>
+						</span>
+						<span class="right rightText facet_count">
+							<%#= link_to 'remove', remove_facet_param(facet.name, item.value) %>
+							<% link_to(remove_facet_param(facet.name, item.value)) do %>
+								<%= image_tag 'cancel_16.png'%>
+							<% end%>
+						</span>
+						</div>
+					<% else %>
+						<div class="container">
+						<span class="left facet_label">
+							<%= link_to item.value, add_facet_param(facet.name, item.value) %>
+						</span>
+						<span class="right rightText facet_count">(<%= item.hits %>)</span>
+						</div>
+					<% end %>
+				</li>
+				<% end %>
+			</ul>
+		</li>
+	<% end %>
+</ul>

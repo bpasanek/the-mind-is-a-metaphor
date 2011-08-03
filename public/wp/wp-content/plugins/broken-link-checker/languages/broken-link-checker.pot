@@ -1,0 +1,1483 @@
+# Translation of the WordPress plugin Broken Link Checker 0.9.5-alpha by Janis Elsts.
+# Copyright (C) 2010 Janis Elsts
+# This file is distributed under the same license as the Broken Link Checker package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Broken Link Checker 0.9.5-alpha\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/broken-link-checker\n"
+"POT-Creation-Date: 2010-08-04 07:17+0000\n"
+"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: core/core.php:152 includes/admin/links-page-js.php:37
+msgid "Loading..."
+msgstr ""
+
+#: core/core.php:176 includes/admin/options-page-js.php:18
+msgid "[ Network error ]"
+msgstr ""
+
+#: core/core.php:201
+msgid "Automatically expand the widget if broken links have been detected"
+msgstr ""
+
+#: core/core.php:459
+msgid "Link Checker Settings"
+msgstr ""
+
+#: core/core.php:460
+msgid "Link Checker"
+msgstr ""
+
+#: core/core.php:465 includes/link-query.php:26
+msgid "Broken Links"
+msgstr ""
+
+#: core/core.php:481
+msgid "View Broken Links"
+msgstr ""
+
+#: core/core.php:518
+msgid "Settings"
+msgstr ""
+
+#: core/core.php:530 core/core.php:1312
+#, php-format
+msgid ""
+"Error: The plugin's database tables are not up to date! (Current version : %"
+"d, expected : %d)"
+msgstr ""
+
+#: core/core.php:674
+msgid "Settings saved."
+msgstr ""
+
+#: core/core.php:681
+msgid "Complete site recheck started."
+msgstr ""
+
+#: core/core.php:693 core/core.php:2806 includes/admin/table-printer.php:521
+msgid "Details"
+msgstr ""
+
+#: core/core.php:707
+msgid "General"
+msgstr ""
+
+#: core/core.php:708
+msgid "Look For Links In"
+msgstr ""
+
+#: core/core.php:709
+msgid "Which Links To Check"
+msgstr ""
+
+#: core/core.php:710
+msgid "Protocols & APIs"
+msgstr ""
+
+#: core/core.php:711
+msgid "Advanced"
+msgstr ""
+
+#: core/core.php:715
+msgid "Broken Link Checker Options"
+msgstr ""
+
+#: core/core.php:741 includes/admin/table-printer.php:181
+msgid "Status"
+msgstr ""
+
+#: core/core.php:743 includes/admin/options-page-js.php:56
+msgid "Show debug info"
+msgstr ""
+
+#: core/core.php:771
+msgid "Check each link"
+msgstr ""
+
+#: core/core.php:776
+#, php-format
+msgid "Every %s hours"
+msgstr ""
+
+#: core/core.php:785
+msgid ""
+"Existing links will be checked this often. New links will usually be checked "
+"ASAP."
+msgstr ""
+
+#: core/core.php:792
+msgid "E-mail notifications"
+msgstr ""
+
+#: core/core.php:798
+msgid "Send me e-mail notifications about newly detected broken links"
+msgstr ""
+
+#: core/core.php:805
+msgid "Link tweaks"
+msgstr ""
+
+#: core/core.php:811
+msgid "Apply custom formatting to broken links"
+msgstr ""
+
+#: core/core.php:815 core/core.php:843
+msgid "Edit CSS"
+msgstr ""
+
+#: core/core.php:839
+msgid "Apply custom formatting to removed links"
+msgstr ""
+
+#: core/core.php:867
+msgid "Stop search engines from following broken links"
+msgstr ""
+
+#: core/core.php:884
+msgid "Look for links in"
+msgstr ""
+
+#: core/core.php:895
+msgid "Post statuses"
+msgstr ""
+
+#: core/core.php:928
+msgid "Link types"
+msgstr ""
+
+#: core/core.php:934
+msgid "Error : All link parsers missing!"
+msgstr ""
+
+#: core/core.php:941
+msgid "Exclusion list"
+msgstr ""
+
+#: core/core.php:942
+msgid ""
+"Don't check links where the URL contains any of these words (one per line) :"
+msgstr ""
+
+#: core/core.php:960
+msgid "Check links using"
+msgstr ""
+
+#: core/core.php:979 includes/links.php:855
+msgid "Timeout"
+msgstr ""
+
+#: core/core.php:985 core/core.php:1031 core/core.php:2933
+#, php-format
+msgid "%s seconds"
+msgstr ""
+
+#: core/core.php:994
+msgid "Links that take longer than this to load will be marked as broken."
+msgstr ""
+
+#: core/core.php:1001
+msgid "Link monitor"
+msgstr ""
+
+#: core/core.php:1009
+msgid "Run continuously while the Dashboard is open"
+msgstr ""
+
+#: core/core.php:1017
+msgid "Run hourly in the background"
+msgstr ""
+
+#: core/core.php:1025
+msgid "Max. execution time"
+msgstr ""
+
+#: core/core.php:1042
+msgid ""
+"The plugin works by periodically launching a background job that parses your "
+"posts for links, checks the discovered URLs, and performs other time-"
+"consuming tasks. Here you can set for how long, at most, the link monitor "
+"may run each time before stopping."
+msgstr ""
+
+#: core/core.php:1052
+msgid "Custom temporary directory"
+msgstr ""
+
+#: core/core.php:1061
+msgid "OK"
+msgstr ""
+
+#: core/core.php:1064
+msgid "Error : This directory isn't writable by PHP."
+msgstr ""
+
+#: core/core.php:1069
+msgid "Error : This directory doesn't exist."
+msgstr ""
+
+#: core/core.php:1077
+msgid ""
+"Set this field if you want the plugin to use a custom directory for its "
+"lockfiles. Otherwise, leave it blank."
+msgstr ""
+
+#: core/core.php:1084
+msgid "Server load limit"
+msgstr ""
+
+#: core/core.php:1102
+#, php-format
+msgid ""
+"Link checking will be suspended if the average <a href=\"%s\">server load</"
+"a> rises above this number. Leave this field blank to disable load limiting."
+msgstr ""
+
+#: core/core.php:1112
+msgid ""
+"Load limiting only works on Linux-like systems where <code>/proc/loadavg</"
+"code> is present and accessible."
+msgstr ""
+
+#: core/core.php:1120
+msgid "Forced recheck"
+msgstr ""
+
+#: core/core.php:1123
+msgid "Re-check all pages"
+msgstr ""
+
+#: core/core.php:1127
+msgid ""
+"The \"Nuclear Option\". Click this button to make the plugin empty its link "
+"database and recheck the entire site from scratch."
+msgstr ""
+
+#: core/core.php:1138
+msgid "Save Changes"
+msgstr ""
+
+#: core/core.php:1183
+msgid "Configure"
+msgstr ""
+
+#: core/core.php:1243
+msgid "Upgrade to Pro to enable this feature"
+msgstr ""
+
+#: core/core.php:1278
+msgid "Check URLs entered in these custom fields (one per line) :"
+msgstr ""
+
+#: core/core.php:1414 core/core.php:1497 core/core.php:1529
+#, php-format
+msgid "Database error : %s"
+msgstr ""
+
+#: core/core.php:1479
+msgid "You must enter a filter name!"
+msgstr ""
+
+#: core/core.php:1483
+msgid "Invalid search query."
+msgstr ""
+
+#: core/core.php:1492
+#, php-format
+msgid "Filter \"%s\" created"
+msgstr ""
+
+#: core/core.php:1519
+msgid "Filter ID not specified."
+msgstr ""
+
+#: core/core.php:1526
+msgid "Filter deleted"
+msgstr ""
+
+#: core/core.php:1574
+#, php-format
+msgid "Replaced %d redirect with a direct link"
+msgid_plural "Replaced %d redirects with direct links"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/core.php:1585
+#, php-format
+msgid "Failed to fix %d redirect"
+msgid_plural "Failed to fix %d redirects"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/core.php:1595
+msgid "None of the selected links are redirects!"
+msgstr ""
+
+#: core/core.php:1641
+#, php-format
+msgid "%d link removed"
+msgid_plural "%d links removed"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/core.php:1652
+#, php-format
+msgid "Failed to remove %d link"
+msgid_plural "Failed to remove %d links"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/core.php:1761
+#, php-format
+msgid ""
+"%d item was skipped because it can't be moved to the Trash. You need to "
+"delete it manually."
+msgid_plural ""
+"%d items were skipped because they can't be moved to the Trash. You need to "
+"delete them manually."
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/core.php:1782
+msgid "Didn't find anything to delete!"
+msgstr ""
+
+#: core/core.php:1810
+#, php-format
+msgid "%d link scheduled for rechecking"
+msgid_plural "%d links scheduled for rechecking"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/core.php:1855 core/core.php:2460
+msgid "This link was manually marked as working by the user."
+msgstr ""
+
+#: core/core.php:1862
+#, php-format
+msgid "Couldn't modify link %d"
+msgstr ""
+
+#: core/core.php:1873
+#, php-format
+msgid "%d link marked as not broken"
+msgid_plural "%d links marked as not broken"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/core.php:1913
+msgid "Table columns"
+msgstr ""
+
+#: core/core.php:1932
+msgid "Show on screen"
+msgstr ""
+
+#: core/core.php:1939
+msgid "links"
+msgstr ""
+
+#: core/core.php:1940 includes/admin/table-printer.php:134
+msgid "Apply"
+msgstr ""
+
+#: core/core.php:1944
+msgid "Misc"
+msgstr ""
+
+#: core/core.php:1959
+#, php-format
+msgid "Highlight links broken for at least %s days"
+msgstr ""
+
+#: core/core.php:1968
+msgid "Color-code status codes"
+msgstr ""
+
+#: core/core.php:1985 core/core.php:2445 core/core.php:2481 core/core.php:2544
+msgid "You're not allowed to do that!"
+msgstr ""
+
+#: core/core.php:2326
+msgid "View broken links"
+msgstr ""
+
+#: core/core.php:2327
+#, php-format
+msgid "Found %d broken link"
+msgid_plural "Found %d broken links"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/core.php:2333
+msgid "No broken links found."
+msgstr ""
+
+#: core/core.php:2340
+#, php-format
+msgid "%d URL in the work queue"
+msgid_plural "%d URLs in the work queue"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/core.php:2343
+msgid "No URLs in the work queue."
+msgstr ""
+
+#: core/core.php:2349
+#, php-format
+msgid "Detected %d unique URL"
+msgid_plural "Detected %d unique URLs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/core.php:2350
+#, php-format
+msgid "in %d link"
+msgid_plural "in %d links"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/core.php:2355
+msgid "and still searching..."
+msgstr ""
+
+#: core/core.php:2361
+msgid "Searching your blog for links..."
+msgstr ""
+
+#: core/core.php:2363
+msgid "No links detected."
+msgstr ""
+
+#: core/core.php:2389
+msgctxt "current load"
+msgid "Unknown"
+msgstr ""
+
+#: core/core.php:2453 core/core.php:2491 core/core.php:2554
+#, php-format
+msgid "Oops, I can't find the link %d"
+msgstr ""
+
+#: core/core.php:2466
+msgid "Oops, couldn't modify the link!"
+msgstr ""
+
+#: core/core.php:2469 core/core.php:2580
+msgid "Error : link_id not specified"
+msgstr ""
+
+#: core/core.php:2501
+msgid "Oops, the new URL is invalid!"
+msgstr ""
+
+#: core/core.php:2512 core/core.php:2563
+msgid "An unexpected error occured!"
+msgstr ""
+
+#: core/core.php:2530
+msgid "Error : link_id or new_url not specified"
+msgstr ""
+
+#: core/core.php:2589
+msgid "You don't have sufficient privileges to access this information!"
+msgstr ""
+
+#: core/core.php:2602
+msgid "Error : link ID not specified"
+msgstr ""
+
+#: core/core.php:2616
+#, php-format
+msgid "Failed to load link details (%s)"
+msgstr ""
+
+#. #-#-#-#-#  plugin.pot (Broken Link Checker 0.9.5-alpha)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: core/core.php:2778
+msgid "Broken Link Checker"
+msgstr ""
+
+#: core/core.php:2792
+#, php-format
+msgid ""
+"The current temporary directory is not accessible; please <a href=\"%s\">set "
+"a different one</a>."
+msgstr ""
+
+#: core/core.php:2797
+#, php-format
+msgid ""
+"Please make the directory <code>%1$s</code> writable by plugins or <a href="
+"\"%2$s\">set a custom temporary directory</a>."
+msgstr ""
+
+#: core/core.php:2804
+msgid "Broken Link Checker can't create a lockfile."
+msgstr ""
+
+#: core/core.php:2809
+msgid ""
+"The plugin uses a file-based locking mechanism to ensure that only one "
+"instance of the resource-heavy link checking algorithm is running at any "
+"given time. Unfortunately, BLC can't find a writable directory where it "
+"could store the lockfile - it failed to detect the location of your server's "
+"temporary directory, and the plugin's own directory isn't writable by PHP. "
+"To fix this problem, please make the plugin's directory writable or enter a "
+"specify a custom temporary directory in the plugin's settings."
+msgstr ""
+
+#: core/core.php:2828
+msgid "PHP version"
+msgstr ""
+
+#: core/core.php:2834
+msgid "MySQL version"
+msgstr ""
+
+#: core/core.php:2847
+msgid ""
+"You have an old version of CURL. Redirect detection may not work properly."
+msgstr ""
+
+#: core/core.php:2859 core/core.php:2875 core/core.php:2880
+msgid "Not installed"
+msgstr ""
+
+#: core/core.php:2862
+msgid "CURL version"
+msgstr ""
+
+#: core/core.php:2868
+msgid "Installed"
+msgstr ""
+
+#: core/core.php:2881
+msgid "You must have either CURL or Snoopy installed for the plugin to work!"
+msgstr ""
+
+#: core/core.php:2892
+msgid "On"
+msgstr ""
+
+#: core/core.php:2893
+msgid "Redirects may be detected as broken links when safe_mode is on."
+msgstr ""
+
+#: core/core.php:2898 core/core.php:2912
+msgid "Off"
+msgstr ""
+
+#: core/core.php:2906
+#, php-format
+msgid "On ( %s )"
+msgstr ""
+
+#: core/core.php:2907
+msgid "Redirects may be detected as broken links when open_basedir is on."
+msgstr ""
+
+#: core/core.php:2926
+msgid "Can't create a lockfile. Please specify a custom temporary directory."
+msgstr ""
+
+#: core/core.php:2950
+msgid ""
+"If this value is zero even after several page reloads you have probably "
+"encountered a bug."
+msgstr ""
+
+#: core/core.php:3006
+#, php-format
+msgid "[%s] Broken links detected"
+msgstr ""
+
+#: core/core.php:3012
+#, php-format
+msgid "Broken Link Checker has detected %d new broken link on your site."
+msgid_plural ""
+"Broken Link Checker has detected %d new broken links on your site."
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/core.php:3027
+#, php-format
+msgid "Here's a list of the first %d broken links:"
+msgid_plural "Here's a list of the first %d broken links:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: core/core.php:3035
+msgid "Here's a list of the new broken links: "
+msgstr ""
+
+#: core/core.php:3047
+#, php-format
+msgid "Link text : %s"
+msgstr ""
+
+#: core/core.php:3048
+#, php-format
+msgid "Link URL : <a href=\"%s\">%s</a>"
+msgstr ""
+
+#: core/core.php:3049
+#, php-format
+msgid "Source : %s"
+msgstr ""
+
+#: core/core.php:3063
+msgid "You can see all broken links here:"
+msgstr ""
+
+#: core/init.php:230
+msgid "Once Weekly"
+msgstr ""
+
+#: core/init.php:236
+msgid "Twice a Month"
+msgstr ""
+
+#: core/init.php:259
+msgid "Broken Link Checker installation failed"
+msgstr ""
+
+#: includes/admin/db-upgrade.php:95
+#, php-format
+msgid "Failed to delete old DB tables. Database error : %s"
+msgstr ""
+
+#: includes/admin/links-page-js.php:58 includes/admin/links-page-js.php:301
+msgid "Wait..."
+msgstr ""
+
+#: includes/admin/links-page-js.php:99 includes/admin/table-printer.php:530
+#: includes/admin/table-printer.php:620
+msgid "Not broken"
+msgstr ""
+
+#: includes/admin/links-page-js.php:213
+#, php-format
+msgid "%d instances of the link were successfully modified."
+msgstr ""
+
+#: includes/admin/links-page-js.php:219
+#, php-format
+msgid ""
+"However, %d instances couldn't be edited and still point to the old URL."
+msgstr ""
+
+#: includes/admin/links-page-js.php:225
+msgid "The link could not be modified."
+msgstr ""
+
+#: includes/admin/links-page-js.php:228 includes/admin/links-page-js.php:353
+msgid "The following error(s) occured :"
+msgstr ""
+
+#: includes/admin/links-page-js.php:339
+#, php-format
+msgid "%d instances of the link were successfully unlinked."
+msgstr ""
+
+#: includes/admin/links-page-js.php:345
+#, php-format
+msgid "However, %d instances couldn't be removed."
+msgstr ""
+
+#: includes/admin/links-page-js.php:350
+msgid "The plugin failed to remove the link."
+msgstr ""
+
+#: includes/admin/links-page-js.php:361 includes/admin/table-printer.php:249
+#: includes/admin/table-printer.php:524 includes/admin/table-printer.php:614
+msgid "Unlink"
+msgstr ""
+
+#: includes/admin/links-page-js.php:405
+msgid "Enter a name for the new custom filter"
+msgstr ""
+
+#: includes/admin/links-page-js.php:416
+msgid ""
+"You are about to delete the current filter.\n"
+"'Cancel' to stop, 'OK' to delete"
+msgstr ""
+
+#: includes/admin/links-page-js.php:439
+msgid ""
+"Are you sure you want to delete all posts, bookmarks or other items that "
+"contain any of the selected links? This action can't be undone.\n"
+"'Cancel' to stop, 'OK' to delete"
+msgstr ""
+
+#: includes/admin/options-page-js.php:54
+msgid "Hide debug info"
+msgstr ""
+
+#: includes/admin/search-form.php:16
+msgid "Save This Search As a Filter"
+msgstr ""
+
+#: includes/admin/search-form.php:26
+msgid "Delete This Filter"
+msgstr ""
+
+#: includes/admin/search-form.php:32 includes/link-query.php:53
+msgid "Search"
+msgstr ""
+
+#: includes/admin/search-form.php:42
+msgid "Link text"
+msgstr ""
+
+#: includes/admin/search-form.php:45 includes/admin/table-printer.php:176
+#: includes/admin/table-printer.php:186
+msgid "URL"
+msgstr ""
+
+#: includes/admin/search-form.php:48 includes/admin/table-printer.php:422
+msgid "HTTP code"
+msgstr ""
+
+#: includes/admin/search-form.php:51
+msgid "Link status"
+msgstr ""
+
+#: includes/admin/search-form.php:68 includes/admin/search-form.php:85
+msgid "Link type"
+msgstr ""
+
+#: includes/admin/search-form.php:70
+msgid "Any"
+msgstr ""
+
+#: includes/admin/search-form.php:74
+msgid "Links used in"
+msgstr ""
+
+#: includes/admin/search-form.php:112
+msgid "Search Links"
+msgstr ""
+
+#: includes/admin/search-form.php:113 includes/admin/table-printer.php:540
+#: includes/admin/table-printer.php:628 includes/admin/table-printer.php:634
+msgid "Cancel"
+msgstr ""
+
+#: includes/admin/table-printer.php:147
+msgid "Compact View"
+msgstr ""
+
+#: includes/admin/table-printer.php:148
+msgid "Detailed View"
+msgstr ""
+
+#: includes/admin/table-printer.php:165
+msgid "Source"
+msgstr ""
+
+#: includes/admin/table-printer.php:171 includes/admin/table-printer.php:197
+msgid "Link Text"
+msgstr ""
+
+#: includes/admin/table-printer.php:191
+msgid "Used in"
+msgstr ""
+
+#: includes/admin/table-printer.php:245
+msgid "Bulk Actions"
+msgstr ""
+
+#: includes/admin/table-printer.php:246
+msgid "Recheck"
+msgstr ""
+
+#: includes/admin/table-printer.php:247
+msgid "Fix redirects"
+msgstr ""
+
+#: includes/admin/table-printer.php:248
+msgid "Mark as not broken"
+msgstr ""
+
+#: includes/admin/table-printer.php:252
+msgid "Move sources to Trash"
+msgstr ""
+
+#: includes/admin/table-printer.php:254
+msgid "Delete sources"
+msgstr ""
+
+#: includes/admin/table-printer.php:269
+msgid "&laquo;"
+msgstr ""
+
+#: includes/admin/table-printer.php:270
+msgid "&raquo;"
+msgstr ""
+
+#: includes/admin/table-printer.php:278
+#, php-format
+msgid "Displaying %s&#8211;%s of <span class=\"current-link-count\">%s</span>"
+msgstr ""
+
+#: includes/admin/table-printer.php:407
+msgid "Post published on"
+msgstr ""
+
+#: includes/admin/table-printer.php:412
+msgid "Link last checked"
+msgstr ""
+
+#: includes/admin/table-printer.php:416
+msgid "Never"
+msgstr ""
+
+#: includes/admin/table-printer.php:427
+msgid "Response time"
+msgstr ""
+
+#: includes/admin/table-printer.php:429
+#, php-format
+msgid "%2.3f seconds"
+msgstr ""
+
+#: includes/admin/table-printer.php:432
+msgid "Final URL"
+msgstr ""
+
+#: includes/admin/table-printer.php:437
+msgid "Redirect count"
+msgstr ""
+
+#: includes/admin/table-printer.php:442
+msgid "Instance count"
+msgstr ""
+
+#: includes/admin/table-printer.php:451
+#, php-format
+msgid "This link has failed %d time."
+msgid_plural "This link has failed %d times."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/table-printer.php:459
+#, php-format
+msgid "This link has been broken for %s."
+msgstr ""
+
+#: includes/admin/table-printer.php:470
+msgid "Log"
+msgstr ""
+
+#: includes/admin/table-printer.php:506 includes/admin/table-printer.php:657
+msgid "[An orphaned link! This is a bug.]"
+msgstr ""
+
+#: includes/admin/table-printer.php:521 includes/admin/table-printer.php:557
+msgid "Show more info about this link"
+msgstr ""
+
+#: includes/admin/table-printer.php:523 includes/admin/table-printer.php:613
+msgid "Remove this link from all posts"
+msgstr ""
+
+#: includes/admin/table-printer.php:529 includes/admin/table-printer.php:619
+msgid "Remove this link from the list of broken links and mark it as valid"
+msgstr ""
+
+#: includes/admin/table-printer.php:534 includes/admin/table-printer.php:611
+msgid "Edit link URL"
+msgstr ""
+
+#: includes/admin/table-printer.php:534 includes/admin/table-printer.php:611
+msgid "Edit URL"
+msgstr ""
+
+#: includes/admin/table-printer.php:540 includes/admin/table-printer.php:628
+msgid "Cancel URL editing"
+msgstr ""
+
+#: includes/admin/table-printer.php:575
+msgctxt "checked how long ago"
+msgid "Checked"
+msgstr ""
+
+#: includes/admin/table-printer.php:591
+msgid "Broken for"
+msgstr ""
+
+#: includes/admin/table-printer.php:635
+msgid "Update URL"
+msgstr ""
+
+#: includes/any-post.php:384 modules/containers/blogroll.php:46
+#: modules/containers/comment.php:153 modules/containers/custom_field.php:197
+msgid "Edit"
+msgstr ""
+
+#: includes/any-post.php:392 modules/containers/custom_field.php:203
+msgid "Move this item to the Trash"
+msgstr ""
+
+#: includes/any-post.php:394 modules/containers/custom_field.php:205
+msgid "Trash"
+msgstr ""
+
+#: includes/any-post.php:399 modules/containers/custom_field.php:210
+msgid "Delete this item permanently"
+msgstr ""
+
+#: includes/any-post.php:401 modules/containers/blogroll.php:47
+#: modules/containers/custom_field.php:212
+msgid "Delete"
+msgstr ""
+
+#: includes/any-post.php:414
+#, php-format
+msgid "Preview &#8220;%s&#8221;"
+msgstr ""
+
+#: includes/any-post.php:415
+msgid "Preview"
+msgstr ""
+
+#: includes/any-post.php:422
+#, php-format
+msgid "View &#8220;%s&#8221;"
+msgstr ""
+
+#: includes/any-post.php:423 modules/containers/comment.php:166
+#: modules/containers/custom_field.php:217
+msgid "View"
+msgstr ""
+
+#: includes/any-post.php:442 modules/containers/custom_field.php:197
+msgid "Edit this item"
+msgstr ""
+
+#: includes/any-post.php:506 modules/containers/blogroll.php:83
+#: modules/containers/comment.php:43
+msgid "Nothing to update"
+msgstr ""
+
+#: includes/any-post.php:516
+#, php-format
+msgid "Updating post %d failed"
+msgstr ""
+
+#: includes/any-post.php:551 modules/containers/custom_field.php:284
+#, php-format
+msgid "Failed to delete post \"%s\" (%d)"
+msgstr ""
+
+#: includes/any-post.php:570 modules/containers/custom_field.php:303
+#, php-format
+msgid ""
+"Can't move post \"%s\" (%d) to the trash because the trash feature is "
+"disabled"
+msgstr ""
+
+#: includes/any-post.php:590 modules/containers/custom_field.php:322
+#, php-format
+msgid "Failed to move post \"%s\" (%d) to the trash"
+msgstr ""
+
+#: includes/any-post.php:698
+#, php-format
+msgid "%d post deleted."
+msgid_plural "%d posts deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/any-post.php:700
+#, php-format
+msgid "%d page deleted."
+msgid_plural "%d pages deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/any-post.php:702
+#, php-format
+msgid "%d \"%s\" deleted."
+msgid_plural "%d \"%s\" deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/any-post.php:721
+#, php-format
+msgid "%d post moved to the Trash."
+msgid_plural "%d posts moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/any-post.php:723
+#, php-format
+msgid "%d page moved to the Trash."
+msgid_plural "%d pages moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/any-post.php:725
+#, php-format
+msgid "%d \"%s\" moved to the Trash."
+msgid_plural "%d \"%s\" moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/containers.php:122
+#, php-format
+msgid "%d '%s' has been deleted"
+msgid_plural "%d '%s' have been deleted"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/containers.php:876 includes/containers.php:894
+#, php-format
+msgid "Container type '%s' not recognized"
+msgstr ""
+
+#: includes/extra-strings.php:2
+msgctxt "module name"
+msgid "Basic HTTP"
+msgstr ""
+
+#: includes/extra-strings.php:3
+msgctxt "module name"
+msgid "Blogroll items"
+msgstr ""
+
+#: includes/extra-strings.php:4
+msgctxt "module name"
+msgid "Comments"
+msgstr ""
+
+#: includes/extra-strings.php:5
+msgctxt "module name"
+msgid "Custom fields"
+msgstr ""
+
+#: includes/extra-strings.php:6
+msgctxt "module name"
+msgid "Embedded DailyMotion videos"
+msgstr ""
+
+#: includes/extra-strings.php:7
+msgctxt "module name"
+msgid "Embedded Vimeo videos"
+msgstr ""
+
+#: includes/extra-strings.php:8
+msgctxt "module name"
+msgid "Embedded YouTube videos"
+msgstr ""
+
+#: includes/extra-strings.php:9
+msgctxt "module name"
+msgid "HTML images"
+msgstr ""
+
+#: includes/extra-strings.php:10
+msgctxt "module name"
+msgid "HTML links"
+msgstr ""
+
+#: includes/extra-strings.php:11
+msgctxt "module name"
+msgid "MediaFire API"
+msgstr ""
+
+#: includes/extra-strings.php:12
+msgctxt "module name"
+msgid "MegaUpload API"
+msgstr ""
+
+#: includes/extra-strings.php:13
+msgctxt "module name"
+msgid "Plaintext URLs"
+msgstr ""
+
+#: includes/extra-strings.php:14
+msgctxt "module name"
+msgid "RapidShare API"
+msgstr ""
+
+#: includes/extra-strings.php:15
+msgctxt "module name"
+msgid "YouTube API"
+msgstr ""
+
+#: includes/extra-strings.php:16
+msgctxt "module name"
+msgid "Posts"
+msgstr ""
+
+#: includes/extra-strings.php:17
+msgctxt "module name"
+msgid "Pages"
+msgstr ""
+
+#: includes/instances.php:102 includes/instances.php:158
+#, php-format
+msgid "Container %s[%d] not found"
+msgstr ""
+
+#: includes/instances.php:111 includes/instances.php:167
+#, php-format
+msgid "Parser '%s' not found."
+msgstr ""
+
+#: includes/link-query.php:25
+msgid "Broken"
+msgstr ""
+
+#: includes/link-query.php:27
+msgid "No broken links found"
+msgstr ""
+
+#: includes/link-query.php:34
+msgid "Redirects"
+msgstr ""
+
+#: includes/link-query.php:35
+msgid "Redirected Links"
+msgstr ""
+
+#: includes/link-query.php:36
+msgid "No redirects found"
+msgstr ""
+
+#: includes/link-query.php:44
+msgid "All"
+msgstr ""
+
+#: includes/link-query.php:45
+msgid "Detected Links"
+msgstr ""
+
+#: includes/link-query.php:46
+msgid "No links found (yet)"
+msgstr ""
+
+#: includes/link-query.php:54
+msgid "Search Results"
+msgstr ""
+
+#: includes/link-query.php:55 includes/link-query.php:106
+msgid "No links found for your query"
+msgstr ""
+
+#: includes/links.php:213
+msgid "The plugin script was terminated while trying to check the link."
+msgstr ""
+
+#: includes/links.php:259
+msgid "The plugin doesn't know how to check this type of link."
+msgstr ""
+
+#: includes/links.php:347
+msgid "Link is valid."
+msgstr ""
+
+#: includes/links.php:349
+msgid "Link is broken."
+msgstr ""
+
+#: includes/links.php:562 includes/links.php:664 includes/links.php:699
+msgid "Link is not valid"
+msgstr ""
+
+#: includes/links.php:579
+msgid ""
+"This link can not be edited because it is not used anywhere on this site."
+msgstr ""
+
+#: includes/links.php:605
+msgid "Failed to create a DB entry for the new URL."
+msgstr ""
+
+#: includes/links.php:677
+msgid "This link is not a redirect"
+msgstr ""
+
+#: includes/links.php:726 includes/links.php:763
+msgid "Couldn't delete the link's database record"
+msgstr ""
+
+#: includes/links.php:837
+msgctxt "link status"
+msgid "Unknown"
+msgstr ""
+
+#: includes/links.php:851 modules/checkers/http.php:255
+msgid "Unknown Error"
+msgstr ""
+
+#: includes/links.php:875
+msgid "Not checked"
+msgstr ""
+
+#: includes/links.php:878
+msgid "False positive"
+msgstr ""
+
+#: includes/links.php:881
+msgctxt "link status"
+msgid "OK"
+msgstr ""
+
+#: includes/parsers.php:106
+#, php-format
+msgid "Editing is not implemented in the '%s' parser"
+msgstr ""
+
+#: includes/parsers.php:121
+#, php-format
+msgid "Unlinking is not implemented in the '%s' parser"
+msgstr ""
+
+#: includes/utility-class.php:291
+#, php-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/utility-class.php:292
+#, php-format
+msgid "%d second ago"
+msgid_plural "%d seconds ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/utility-class.php:295
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/utility-class.php:296
+#, php-format
+msgid "%d minute ago"
+msgid_plural "%d minutes ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/utility-class.php:299
+#, php-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/utility-class.php:300
+#, php-format
+msgid "%d hour ago"
+msgid_plural "%d hours ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/utility-class.php:303
+#, php-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/utility-class.php:304
+#, php-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/utility-class.php:307
+#, php-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/utility-class.php:308
+#, php-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/checkers/http.php:241
+msgid "Server Not Found"
+msgstr ""
+
+#: modules/checkers/http.php:250
+msgid "Connection Failed"
+msgstr ""
+
+#: modules/checkers/http.php:284 modules/checkers/http.php:354
+#, php-format
+msgid "HTTP code : %d"
+msgstr ""
+
+#: modules/checkers/http.php:286 modules/checkers/http.php:356
+msgid "(No response)"
+msgstr ""
+
+#: modules/checkers/http.php:292
+msgid "Most likely the connection timed out or the domain doesn't exist."
+msgstr ""
+
+#: modules/checkers/http.php:363
+msgid "Request timed out."
+msgstr ""
+
+#: modules/checkers/http.php:381
+msgid "Using Snoopy"
+msgstr ""
+
+#: modules/containers/blogroll.php:21
+msgid "Bookmark"
+msgstr ""
+
+#: modules/containers/blogroll.php:27 modules/containers/blogroll.php:46
+msgid "Edit this bookmark"
+msgstr ""
+
+#: modules/containers/blogroll.php:47
+#, php-format
+msgid ""
+"You are about to delete this link '%s'\n"
+"  'Cancel' to stop, 'OK' to delete."
+msgstr ""
+
+#: modules/containers/blogroll.php:97
+#, php-format
+msgid "Updating bookmark %d failed"
+msgstr ""
+
+#: modules/containers/blogroll.php:128
+#, php-format
+msgid "Failed to delete blogroll link \"%s\" (%d)"
+msgstr ""
+
+#: modules/containers/blogroll.php:299
+#, php-format
+msgid "%d blogroll link deleted."
+msgid_plural "%d blogroll links deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/containers/comment.php:53
+#, php-format
+msgid "Updating comment %d failed"
+msgstr ""
+
+#: modules/containers/comment.php:74
+#, php-format
+msgid "Failed to delete comment %d"
+msgstr ""
+
+#: modules/containers/comment.php:95
+#, php-format
+msgid "Can't move comment %d to the trash"
+msgstr ""
+
+#: modules/containers/comment.php:153 modules/containers/comment.php:195
+msgid "Edit comment"
+msgstr ""
+
+#: modules/containers/comment.php:160
+msgid "Delete Permanently"
+msgstr ""
+
+#: modules/containers/comment.php:162
+msgid "Move this comment to the trash"
+msgstr ""
+
+#: modules/containers/comment.php:162
+msgctxt "verb"
+msgid "Trash"
+msgstr ""
+
+#: modules/containers/comment.php:166
+msgid "View comment"
+msgstr ""
+
+#: modules/containers/comment.php:183
+msgid "Comment"
+msgstr ""
+
+#: modules/containers/comment.php:360
+#, php-format
+msgid "%d comment has been deleted."
+msgid_plural "%d comments have been deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/containers/comment.php:379
+#, php-format
+msgid "%d comment moved to the Trash."
+msgid_plural "%d comments moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/containers/custom_field.php:84
+#, php-format
+msgid "Failed to update the meta field '%s' on %s [%d]"
+msgstr ""
+
+#: modules/containers/custom_field.php:110
+#, php-format
+msgid "Failed to delete the meta field '%s' on %s [%d]"
+msgstr ""
+
+#: modules/containers/custom_field.php:187
+msgid "Edit this post"
+msgstr ""
+
+#: modules/containers/custom_field.php:217
+#, php-format
+msgid "View \"%s\""
+msgstr ""
+
+#: modules/containers/dummy.php:34 modules/containers/dummy.php:45
+#, php-format
+msgid "I don't know how to edit a '%s' [%d]."
+msgstr ""
+
+#: modules/parsers/image.php:156
+msgid "Image"
+msgstr ""
+
+#: modules/parsers/metadata.php:117
+msgid "Custom field"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://w-shadow.com/blog/2007/08/05/broken-link-checker-for-wordpress/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Checks your blog for broken links and missing images and notifies you on the "
+"dashboard if any are found."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Janis Elsts"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://w-shadow.com/blog/"
+msgstr ""

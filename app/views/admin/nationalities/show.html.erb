@@ -1,0 +1,11 @@
+<div class="top_nav"><%= link_to 'Edit', edit_admin_nationality_path(@nationality) %> |
+<%= link_to 'Back', admin_nationalities_path %></div>
+
+<div class="show_section">
+	<%= @nationality.name %>
+</div>
+
+<%= render 'admin/created_updated' %>
+
+<div class="bottom_nav"><%= link_to 'Edit', edit_admin_nationality_path(@nationality) %> |
+<%= link_to 'Back', admin_nationalities_path %></div>

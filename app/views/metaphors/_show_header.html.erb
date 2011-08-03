@@ -1,0 +1,17 @@
+<div id="search_control">
+	<% if params[:action] == 'search_item' %>
+		<div class="yui-gb">
+			<div class="yui-u first">
+				<%= render 'back_to_search' %>
+			</div>
+			<div class="yui-u">
+				<%= render 'search_item_prev_next' %>
+			</div>
+			<div class="yui-u">
+				<%= link_to 'bookmark this metaphor', metaphor_path(@metaphor) %>
+			</div>
+		</div>
+	<% else %>
+		<%= render 'back_to_search' %>
+	<% end %>
+</div>

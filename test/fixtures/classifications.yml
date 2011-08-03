@@ -1,0 +1,91 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+Metaphor_9681:
+  value: Body::Eating and Drinking
+  classifiable_type: Metaphor
+  classifiable: Metaphor_9681
+  
+Metaphor_9682:
+  value: Body::Fetters::Cordage
+  classifiable_type: Metaphor
+  classifiable: Metaphor_9682
+  
+Metaphor_9684:
+  value: Body::Chains
+  classifiable_type: Metaphor
+  classifiable: Metaphor_9684
+  
+Metaphor_9691:
+  value: Liquid::Ocean
+  classifiable_type: Metaphor
+  classifiable: Metaphor_9691
+  
+Metaphor_9692:
+  value: Dress::Vest::Vest
+  classifiable_type: Metaphor
+  classifiable: Metaphor_9692
+  
+Metaphor_8483:
+  value: Government::Throne
+  classifiable_type: Metaphor
+  classifiable: Metaphor_8483
+  
+Metaphor_8484_see_8483:
+  value: Government::Rule and Subjection::Rule of Truth
+  classifiable_type: Metaphor
+  classifiable: Metaphor_8483
+  
+Metaphor_8485:
+  value: Population::Subjects
+  classifiable_type: Metaphor
+  classifiable: Metaphor_8485
+
+Work_3752:
+  value: Poetry::Dialogue
+  classifiable_type: Work
+  classifiable: Work_3752
+
+Work_3757:
+  value: Poetry
+  classifiable_type: Work
+  classifiable: Work_3757
+
+Work_3233:
+  value: Poetry
+  classifiable_type: Work
+  classifiable: Work_3233
+
+Work_3399:
+  value: Prose::Letter
+  classifiable_type: Work
+  classifiable: Work_3399
+
+Work_4784:
+  value: Poetry::Eclogue
+  classifiable_type: Work
+  classifiable: Work_4784
+
+Work_4808:
+  value: Poetry::Epistle
+  classifiable_type: Work
+  classifiable: Work_4808
+
+Work_4938:
+  value: Letter::Letter
+  classifiable_type: Work
+  classifiable: Work_4938
+
+Work_5303:
+  value: Poetry; Drama::Epilogue
+  classifiable_type: Work
+  classifiable: Work_5303
+
+Work_3187:
+  value: Prose::Philosophy
+  classifiable_type: Work
+  classifiable: Work_3187
+  
+Work_3189:
+  value: Prose
+  classifiable_type: Work
+  classifiable: Work_3189

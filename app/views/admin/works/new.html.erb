@@ -1,0 +1,19 @@
+<div class="top_nav"><%= link_to 'Back', collection_path %></div>
+
+<h1>
+	New work
+	<% if (@author) -%>
+	by "<%= @author.name_with_dates %>"
+	<% end %>
+</h1>
+
+<% form_for(setup_work(@work), :url => collection_path) do |f| %>
+  
+  <%= render 'form_fields', :f=>f %>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<div class="bottom_nav"><%= link_to 'Back', collection_path %></div>

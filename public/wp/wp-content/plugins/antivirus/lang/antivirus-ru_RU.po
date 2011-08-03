@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Antivirus\n"
+"Report-Msgid-Bugs-To: wp-polyglots@lists.automattic.com\n"
+"POT-Creation-Date: 2009-05-27 20:55+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Sergej Müller\n"
+"Language-Team: Elvis <presley_el@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+
+msgid "Suspicion on a virus"
+msgstr "Подозрение на вирус"
+
+msgid "AntiVirus for WordPress"
+msgstr "AntiVirus для WordPress"
+
+msgid "There is no virus"
+msgstr "Это не вирус"
+
+msgid "View line"
+msgstr "Посмотреть в редакторе строку "
+
+msgid "Enable the daily antivirus scan and send me an email if suspicion on a virus"
+msgstr "Включить ежедневное сканирование антивирусом и отправку отсчета на e-mail администратора"
+
+msgid "Scan finished"
+msgstr "Сканирование завершено"
+
+msgid "Last"
+msgstr "Последний"
+
+msgid "Manual scan"
+msgstr "Ручное сканирование"
+
+msgid "Scan the templates now"
+msgstr "Сканировать скины на вирусы сейчас"
+
+msgid "About"
+msgstr "О плагине"
+
+msgid "Enable the daily antivirus scan and send the administrator an e-mail if suspicion on a virus"
+msgstr "Включить ежедневное сканирование антивирусом и отправку отсчета на e-mail администратора"
+
+msgid "Alternate e-mail address"
+msgstr "Ввести альтернативный e-mail"
+

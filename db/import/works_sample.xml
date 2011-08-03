@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+-
+- phpMyAdmin XML Dump
+- version 2.10.1
+- http://www.phpmyadmin.net
+-
+- Host: localhost
+- Generation Time: Jun 09, 2009 at 09:35 AM
+- Server version: 5.0.51
+- PHP Version: 5.2.8
+-->
+
+<!--
+- Database: 'bpasanek_metabase_backup'
+-->
+<bpasanek_metabase_backup>
+  <!-- Table work -->
+    <work>
+        <WorkID>4242</WorkID>
+        <Title>  Part of the Thirteenth Book of &lt;i&gt;Homer's Odysses &lt;/i&gt;[from Works]</Title>
+        <Year>1717</Year>
+        <YearInt>1717</YearInt>
+        <Printer>Printed for Bernard Lintot</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Epic; Translation</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>5150</WorkID>
+        <Title> 1347.  I take Thee at Thy word. [from Short Hymns on select Passages of the Holy Scriptures]</Title>
+        <Year>1762</Year>
+        <YearInt>1762</YearInt>
+        <Printer></Printer>
+        <PlacePub>Bristol</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Hymn; Devotional</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>3299</WorkID>
+        <Title> 810.  Righteous in our own esteem.  [from Hymns on the Four Gospels, and Acts of the Apostles. Including Such &quot;Short Hymns&quot; as Were Published in 1762.]</Title>
+        <Year></Year>
+        <YearInt>0</YearInt>
+        <Printer></Printer>
+        <PlacePub></PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Hymn; Devotional</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>5170</WorkID>
+        <Title> 872. Jesus, to Thee [from Short Hymns on Select Passages of the Holy Scriptures]</Title>
+        <Year>1762</Year>
+        <YearInt>1762</YearInt>
+        <Printer></Printer>
+        <PlacePub>Bristol</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Devotional</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>3221</WorkID>
+        <Title> &lt;i&gt;REMONSTRANCE&lt;/i&gt; IN THE PLATONIC SHADE, FLOURISHING ON AN HEIGHT.</Title>
+        <Year></Year>
+        <YearInt>0</YearInt>
+        <Printer></Printer>
+        <PlacePub></PlacePub>
+        <Genre></Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4987</WorkID>
+        <Title> A Defence of female Inconstancy.  In an Epistle to Robert Tracy, of Coscomb, in Gloucestershire, Esq. [from A Collection of Original Poems. By Samuel Derrick]</Title>
+        <Year>1755</Year>
+        <YearInt>1755</YearInt>
+        <Printer>Printed for the author; And sold by A. Millar</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Epistle</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>3444</WorkID>
+        <Title> A DOLLFVLL DISCOVRSE OF A great Lorde and a Ladie. Translated out of French into English. [from Churchyard's Challenge]</Title>
+        <Year>1593</Year>
+        <YearInt>1593</YearInt>
+        <Printer></Printer>
+        <PlacePub></PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>3790</WorkID>
+        <Title> A Letter from the Country to a Friend in Town, giving an Account of the Author's Inclinations to Poetry.  Written in July, 1678. [from &lt;i&gt;Works&lt;/i&gt;]</Title>
+        <Year>1684</Year>
+        <YearInt>1684</YearInt>
+        <Printer>Printed for Jo. Hindmarsh [etc.]</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Ode</SubGenre>
+        <Citation></Citation>
+        <Composed>w. 1678</Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4116</WorkID>
+        <Title> A new Litany very proper to be read by a merry Society over a Glass of good Liquor. [from The Fourth Volume of the Writings Of the Author of the London-Spy. Prose and Verse]</Title>
+        <Year>1709</Year>
+        <YearInt>1709</YearInt>
+        <Printer>Printed for George Sawbridge [etc.]</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Song</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4929</WorkID>
+        <Title> Another.  By nature form'd to conquer hearts [from Miscellanies, in Verse and Prose. By George Jeffreys]</Title>
+        <Year>1754</Year>
+        <YearInt>1754</YearInt>
+        <Printer>Printed for the Author</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4931</WorkID>
+        <Title> Father Francis and Sister Constance. [from Miscellanies, in Verse and Prose. By George Jeffreys]</Title>
+        <Year>1754</Year>
+        <YearInt>1754</YearInt>
+        <Printer>Printed for the Author</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4934</WorkID>
+        <Title> Father Francis and Sister Constance. [from Miscellanies, in Verse and Prose. By George Jeffreys]</Title>
+        <Year>1754</Year>
+        <YearInt>1754</YearInt>
+        <Printer>Printed for the Author</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Devotional</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>6267</WorkID>
+        <Title> Hegel's Philosophy of Mind (Part III of the Encyclopaedia of the Philosophical Sciences)</Title>
+        <Year>1830</Year>
+        <YearInt>1830</YearInt>
+        <Printer></Printer>
+        <PlacePub></PlacePub>
+        <Genre>Prose</Genre>
+        <SubGenre>Philosophy; German Idealism</SubGenre>
+        <Citation>Hegel, G. W. F. &lt;u&gt;Hegel's Philosophy of Mind: Being Part Three of the Encyclopaedia of the Philosophical Sciences (1830)&lt;/u&gt;. Trans William Wallace. Together with the &lt;i&gt;Zus&amp;auml;tze&lt;/i&gt; in Boumann's text (1845). Trans. A. V. Miller. Oxford:&lt;BR&gt;Oxford University Press, 1971.</Citation>
+        <Composed>Together with &lt;i&gt;Zus&amp;auml;tze&lt;/i&gt; (1845)</Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>3272</WorkID>
+        <Title> HYMN I.  Where have I been so long [from Hymns for a Protestant]</Title>
+        <Year></Year>
+        <YearInt>0</YearInt>
+        <Printer></Printer>
+        <PlacePub></PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Hymn; Devotional</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4771</WorkID>
+        <Title> HYMN XIV. John xv. 26, 27&lt;i&gt;.&lt;/i&gt; [from HYMNS OF &lt;i&gt;Petition&lt;/i&gt; and &lt;i&gt;Thanksgiving&lt;/i&gt; FOR THE PROMISE OF THE FATHER. HYMNS FOR WHIT-SUNDAY.]</Title>
+        <Year>1746</Year>
+        <YearInt>1746</YearInt>
+        <Printer></Printer>
+        <PlacePub>Bristol</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4755</WorkID>
+        <Title> HYMN XXXIII.  Jesu, dear, redeeming Lord [from Hymns on the Lord's Supper]</Title>
+        <Year>1745</Year>
+        <YearInt>1745</YearInt>
+        <Printer></Printer>
+        <PlacePub>Bristol</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Hymn; Devotional</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4832</WorkID>
+        <Title> LXIX. THE SAME. FOR A BACKSLIDER.  Hymn 9. [from HYMNS AND SACRED POEMS. IN TWO VOLUMES. BY&lt;i&gt;CHARLES WESLEY&lt;/i&gt; , M.A., Student of &lt;i&gt;Christ-Church&lt;/i&gt;, Oxford. Vol. II.]</Title>
+        <Year>1749</Year>
+        <YearInt>1749</YearInt>
+        <Printer></Printer>
+        <PlacePub>Bristol</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Hymn; Devotional</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>5284</WorkID>
+        <Title> LXV.  Fulfill'd in us we daily own. [from Hymns on the Trinity]</Title>
+        <Year>1767</Year>
+        <YearInt>1767</YearInt>
+        <Printer></Printer>
+        <PlacePub>Bristol</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Hymn; Devotional</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>5086</WorkID>
+        <Title> Memoirs of the celebrated Mrs. Woffington, Interspersed with several theatrical anecdotes; the amours of many persons of the first rank</Title>
+        <Year>1760</Year>
+        <YearInt>1760</YearInt>
+        <Printer>J. Swan</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Prose</Genre>
+        <SubGenre>Memoirs</SubGenre>
+        <Citation>&lt;u&gt;Memoirs of the celebrated Mrs. Woffington, Interspersed with several theatrical anecdotes; the amours of many persons of the first rank&lt;/u&gt;; ... [The second editi]on, with additions [London ], [1760]. Based on information from English Short Title Catalogue. Eighteenth Century Collections Online. Gale Group.&lt;BR&gt;http://galenet.galegroup.com/servlet/ECCO</Citation>
+        <Composed>2nd edition</Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4587</WorkID>
+        <Title> On the Death of a Young Lady, Mrs. E. D  Obiit 7 August, 1712. Anno &amp;AElig;tat. 23. [from Miscellanies in Verse and Prose. By Mr. Jabez Hughes]</Title>
+        <Year>1737</Year>
+        <YearInt>1737</YearInt>
+        <Printer>Printed by John Watts</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4054</WorkID>
+        <Title> On the Death of an aged and honoured Relative, Mrs. M. W. July 13, 1693. [from Horae Lyricae. Poems, Chiefly of the Lyric Kind; In Three Books: Sacred to Devotion and Piety--To Virtue, Honour and Friendship--To the Memory of the Dead.</Title>
+        <Year>1706</Year>
+        <YearInt>1706</YearInt>
+        <Printer></Printer>
+        <PlacePub></PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Devotional</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>5034</WorkID>
+        <Title> On viewing the Curiosities, in the Repository of the late Dr. MEAD. [from Poems on Several Occasions. By Samuel Boyce]</Title>
+        <Year>1757</Year>
+        <YearInt>1757</YearInt>
+        <Printer>Printed for R. and J. Dodsley ... J. Newbery ... and W. Reeve [etc.]</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>5177</WorkID>
+        <Title> PSALM CXIX.  Blessed are the pure in heart. [from Versions and Paraphrases of Select Psalms.]</Title>
+        <Year>1762?</Year>
+        <YearInt>1762</YearInt>
+        <Printer></Printer>
+        <PlacePub></PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>3643</WorkID>
+        <Title> Psalm CXIX. &lt;i&gt;Beati immaculati in via, &amp;c.&lt;/i&gt; [from A paraphrase upon the psalms of David. By Sam. Woodford]</Title>
+        <Year>1667</Year>
+        <YearInt>1667</YearInt>
+        <Printer>Printed by R. White, for Octavian Pullein [etc.]</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>5085</WorkID>
+        <Title> Several sermons upon the most important subjects of practical religion. By ... Hugh Binning, ... Carefully copied and revised from his own manuscript, never before printed. To which is subjoined, An essay upon Christian love: ... To which is prefixed, some account of the life and writings of the author.</Title>
+        <Year>1760</Year>
+        <YearInt>1760</YearInt>
+        <Printer>Printed by William Duncan, sen.</Printer>
+        <PlacePub>Glasgow</PlacePub>
+        <Genre>Prose</Genre>
+        <SubGenre>Sermon</SubGenre>
+        <Citation>Binning, Hugh. &lt;u&gt;Several sermons upon the most important subjects of practical religion. By ... Hugh Binning, ... Carefully copied and revised from his own manuscript, never before printed. To which is subjoined, An essay upon Christian love: ... To which is prefixed, some account of the life and writings of the author. &lt;/u&gt;Glasgow, 1760. Based on information from English Short Title Catalogue. Eighteenth Century Collections Online. Gale Group.&lt;BR&gt;http://galenet.galegroup.com/servlet/ECCO</Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4485</WorkID>
+        <Title> Sir Amorous Whimsie:  Or, The &lt;i&gt;Desperate Lover&lt;/i&gt;. A True Tale. [from A Muse in Livery. A Collection of Poems]</Title>
+        <Year>1732</Year>
+        <YearInt>1732</YearInt>
+        <Printer>Printed for J. Nourse</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Tale</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4356</WorkID>
+        <Title> Strephon's Love for Delia justified: In an Epistle to Celadon. [from Poems upon Several Occasions. By the Reverend Mr. John Pomfret. The Sixth Edition, Corrected. With some Account Of his Life and Writings. To which are added, His RemainsThe Sixth Edition, Corrected]</Title>
+        <Year>1724</Year>
+        <YearInt>1724</YearInt>
+        <Printer>Printed for D. Brown ... J. Walthoe ... A. Bettesworth, and E. Taylor ... and J. Hooke [etc.]</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Epistle</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4422</WorkID>
+        <Title> The following Lines being sent to the Author as an Answer to the foregoingBallad , he, to shew what he published was not done out of Malice to Polly Peachum, has hereunto annexed them, having so much Value for the Female Sex as to give Fair Play to a Fair Woman. [from The Twickenham Hotch-Potch, For the Use of the Rev. Dr. Swift, Alexander Pope, Esq.; and Company. Being a sequel to the Beggars Opera, &amp;c. Containing, I. The State of Poetry, and Fate of Poets, in the Reign of King Charles IId. II. Seriousities and Comicalities, by Peter Henning, a Dutchman. III. Two Dozen of Infallible Maxims, for Court and City. IV. The Present War among Authors, viz. Swift, Pope, Theobald, Rolli, Voltaire, Parson B---dy, and Mr. Ozell. V. The Rival Actresses, viz. Mrs. O---d, Mrs. P---r, Mrs. B---h, Miss Y---ger and Miss Polly Peachum. VI. A Poetical Catalogue of Polly Peachum's Gallants. VII. An Epistle from Signora F---na to a Lady. VIII. A True Copy of Polly Peachum's Opera. Also, her Panegyrick. Written by Caleb D'Anvers]</Title>
+        <Year>1728</Year>
+        <YearInt>1728</YearInt>
+        <Printer>Printed for J. Roberts [etc.]</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4115</WorkID>
+        <Title> The Resolute Lady. A Song. [from The Fourth Volume of the Writings Of the Author of the London-Spy. Prose and Verse]</Title>
+        <Year>1709</Year>
+        <YearInt>1709</YearInt>
+        <Printer>Printed for George Sawbridge [etc.]</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Song</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>6052</WorkID>
+        <Title> The Rise and Fall of Northern Poetry: A Poem, In Two Parts [from Poems and Plays, by Mr. Jerningham. In Four Volumes ... The Ninth Edition]</Title>
+        <Year>1806</Year>
+        <YearInt>1806</YearInt>
+        <Printer>Printed by Luke Hansard for Nornaville and Fell [etc.]</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed>9th edition</Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4280</WorkID>
+        <Title> Thoughts on Death and Judgment.  An Ode. [from Poems On several Grave and Important Subjects, Chiefly occasion'd by the Death of the late Ingenious Youth John Mitchell. In Two Parts. With a General Preface by Appointment of an Athenian Society in Edinburgh]</Title>
+        <Year>1719</Year>
+        <YearInt>1719</YearInt>
+        <Printer>Printed for J. Mc Euen in Edinburgh, and for T. Cox [etc.]</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Ode</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>3260</WorkID>
+        <Title> To ------ on the various Styles of Poetry [From Collected Poems]</Title>
+        <Year></Year>
+        <YearInt>0</YearInt>
+        <Printer></Printer>
+        <PlacePub></PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>3649</WorkID>
+        <Title> To Her Royal Highness the Dutchess of York, on her commanding me to send her some things that I had written. [from Poems: By the most deservedly Admired Mrs Katherine Philips: The matchless Orinda. To which is added Monsieur Corneille's Pompey &amp; Horace Tragedies. With several other Translations out of French]</Title>
+        <Year>1667</Year>
+        <YearInt>1667</YearInt>
+        <Printer>Printed by J. M. for H. Herringman [etc.]</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Ode</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>5631</WorkID>
+        <Title> To Mr. R---,  ON HIS Benevolent Scheme for rescuing Poor Children from Vice and Misery, by Promoting Sunday Schools [from Poems, on several occasions. By Ann Yearsley, a milkwoman of Bristol. The second edition]</Title>
+        <Year>1785</Year>
+        <YearInt>1785</YearInt>
+        <Printer>Printed For T. Cadell [etc.]</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed>2nd edition</Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>3642</WorkID>
+        <Title> To Mrs. Wogan, my Honoured Friend, on the Death of her Husband. [from Poems: By the most deservedly Admired Mrs Katherine Philips: The matchless Orinda. To which is added Monsieur Corneille's Pompey &amp; Horace Tragedies. With several other Translations out of French]</Title>
+        <Year>1667</Year>
+        <YearInt>1667</YearInt>
+        <Printer>Printed by J. M. for H. Herringman [etc.]</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre>Ode</SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>3848</WorkID>
+        <Title> To my Friend EXILLUS,  on his persuading me to Marry Old Damon. [from Poetical Recreations: Consisting of Original Poems, Songs, Odes etc; With several New Translations. In Two Parts: Part I. Occasionally written by Mrs. Jane Barker. Part II. By Several Gentlemen of the Universities, and Others]</Title>
+        <Year>1688</Year>
+        <YearInt>1688</YearInt>
+        <Printer>Benjamin Crayle</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>3261</WorkID>
+        <Title> To the Right Honourable George, Lord Ramsay</Title>
+        <Year></Year>
+        <YearInt>0</YearInt>
+        <Printer></Printer>
+        <PlacePub></PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed>w. 1719</Composed>
+        <Notes></Notes>
+    </work>
+    <work>
+        <WorkID>4488</WorkID>
+        <Title> To the Right Honourable John &lt;i&gt;Earl of&lt;/i&gt; Stair,  BEFORE THE Election of Sixteen Peers for &lt;i&gt;Scotland, Anno Dom.&lt;/i&gt; 1722. [from Poems on Several Occasions. In Two Volumes. By Mr. Joseph Mitchell]</Title>
+        <Year>1732</Year>
+        <YearInt>1732</YearInt>
+        <Printer>Printed for Harmen Noorthouck [etc.]</Printer>
+        <PlacePub>London</PlacePub>
+        <Genre>Poetry</Genre>
+        <SubGenre></SubGenre>
+        <Citation></Citation>
+        <Composed></Composed>
+        <Notes></Notes>
+    </work>
+</bpasanek_metabase_backup>

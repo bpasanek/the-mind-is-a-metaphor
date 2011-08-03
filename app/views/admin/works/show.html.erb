@@ -1,0 +1,76 @@
+<div class="top_nav"><%= link_to 'Edit', edit_object_path(@work) %> |
+<%= link_to 'Back', collection_path %></div>
+<h1>
+	Work "<%= @work.title %>" 
+	<%= "by #{link_to @author.name_with_dates, admin_author_path(@author)}" if @author %>
+</h1>
+
+<div class="show_section">
+	<div class="entry">
+		<span class="label">Year:</span>
+		<div class="description"><%= @work.year %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Integer Year:</span>
+		<div class="description"><%= @work.year_integer %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Printer:</span>
+		<div class="description"><%= @work.printer %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Place of Publication:</span>
+		<div class="description"><%= @work.place_of_publication %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Citation:</span>
+		<div class="description"><%= @work.citation %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Composed:</span>
+		<div class="description"><%= @work.composed %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Notes:</span>
+		<div class="description"><%= @work.notes %></div>
+	</div>
+</div>
+
+<h2>Metaphors</h2>
+<div class="show_section">
+	<%= link_to 'View All', admin_work_metaphors_path(@work) %> | 
+	<%= link_to 'Add New', new_admin_work_metaphor_path(@work) %>
+</div>
+
+<h2>Genres</h2>
+<div class="show_section">
+	<% if @work.genres.empty? -%>
+		<em>None specified</em>
+	<% else -%>
+		<% for genre in @work.genres do -%>
+			<div class="entry">
+				<span class="label">Value:</span>
+				<div class="description"><%= genre.value %></div>
+			</div>
+		<% end -%>
+	<% end -%>
+</div>
+
+<h2>Authors</h2>
+<div class="show_section">
+	<% if @work.authors.empty? -%>
+		<em>None specified</em>
+	<% else -%>
+		<% @work.authors.each do |w| -%>
+			<div class="entry">
+				<span class="label">Name:</span>
+				<div class="description"><%= link_to w.name, admin_author_path(w) %></div>
+			</div>
+		<% end -%>
+	<% end -%>
+</div>
+
+<%= render 'admin/created_updated' %>
+
+<div class="bottom_nav"><%= link_to 'Edit', edit_object_path(@work) %> |
+<%= link_to 'Back', collection_path %></div>

@@ -1,0 +1,110 @@
+h1. Setting up your computer 
+
+You need the following software installed on your computer. 
+
+
+
+Once macports is installed, install subversion and imagemagick with this command
+
+bq. sudo port install subversion imagemagick
+
+Now go get some coffee...seriously, this takes a while
+
+After this software is installed, you can check the project out of the library's subversion repository. At the command prompt, type
+
+bq. mkdir ~/projects/metaphors
+svn co http://subversion.lib.virginia.edu/repos/mind_is_a_metaphor/trunk projects/metaphors
+
+Now, make sure all the required gems are installed
+
+bq. cd ~/projects/metaphors
+sudo rake gems:install
+
+And for good measure, make sure the mongrel gem is installed
+
+bq. sudo gem install mongrel
+
+You also need to move the example database configuration so Rails knows about it.
+
+bq. mv ~/projects/metaphors/config/database.example ~/projects/metaphors/config/database.yml
+
+This will create an SQLite database which is perfectly fine for development purposes.
+
+Now, set up the database and create all the tables with the following
+
+bq. cd ~/projects/metaphors/
+rake db:create
+rake db:migrate
+
+h2. Starting the application 
+
+There are two things required to see this application on your computer. Solr must be running, and so should mongrel. You'll need two terminal windows open for this. 
+
+In the first terminal, start solr
+
+bq. cd ~/projects/metaphor
+rake solr:start
+
+And in the second, start the Rails application
+
+bq. cd ~/projects/metaphors
+ruby script/server
+
+You'll now be able to view the application
+
+h2. Updating files 
+
+Make sure you have the most recent copy of the source code by running a subversion update
+
+bq. svn up ~/projects/metaphors
+
+Now launch TextMate to edit any of the application files
+
+bq. mate ~/projects/metaphors/
+
+h2. Project Layout
+
+This is a rails projects and follows rails conventions. Stylesheets are locate din the public/stylesheets folder and the main one to edit is named screen.css (public/stylesheets/screen.css). What actually is generated on the screen is all located in the app folder. Most of the time, you'll be focused on the items in the views folder. To edit the "About" page for instance, open the app/views/pages/about.html.erb. 
+
+A brief note on the naming conventions. Files that begin with underscores (e.g. app/views/metaphors/_facets.html.erb) are what are called "partials" in rails. These are blocks of reusable code that allow programmers to include that same block of code on multiple pages. The names and file suffix of these files is also important. The file name (show) corresponds to a controller action (app/controllers/metaphors_controller.rb). The suffix of the file tells rails what mimetype to use (e.g. html) and what parser to use (erb). There are a bunch of different kinds of parsers (haml for example), but erb is relatively straight forward for anyone who had ever edited HTML. 
+
+h2. Committing Changes
+
+Once everything is working on your computer, there is a three-stage process to update all the servers. The first stage is to update the subversion repository. You can do this from TextMate (click on Bundles/Subversion) or from the command line
+
+bq. cd ~/projects/metaphors && svn ci -m 'Brief message about what you changed'
+
+(On the above line, I just chained two commands together; it's the same as putting them on separate lines without the "&&")
+
+After you have committed the changes to the subversion server, it's time to check the site out on the staging server. We have a great setup for this with capistrano, so you just need to type a single command to start the update process.
+
+bq. cd ~/projects/metaphors
+cap deploy
+
+This is a magical script which logs on to the staging server (sds1.itc.virginia.edu), goes into your project directory (/usr/local/projects/metaphors) and does a new checkout of the subversion repository (https://subversion.lib.virginia.edu/repos/mind_is_a_metaphor) in it's releases sub-directory. After getting the latest copy in releases, it removes the "current" symlink in your projects directory and creates a new one to the latest release. The script then restarts the web application to show the latest code.
+
+Now, it's time to check that everything is functioning properly, so launch your browser and have a look:
+
+"staging":http://staging.metaphors.lib.virginia.edu
+
+h3. OMG...it's broken
+
+Not to worry, if the site's broken, you can quickly recover by running the capistrano rollback task
+
+bq. cd ~/projects/metaphors
+cap deploy:rollback
+
+This will take you back to the state just before you messed up the project.
+
+h2. Production
+
+Assuming everything is correct on the staging server, to get the changes to the production servers (sds3.itc.virginia.edu and sds5.itc.virginia.edu), we run the same command with another flag:
+
+bq. cd ~/projects/metaphors
+cap deploy ENV=production
+
+Again, on the off chance that something goes awry, you can roll back the changes to the production nodes with 
+
+bq. cd ~/projects/metaphors
+cap deploy:rollback ENV=production
+

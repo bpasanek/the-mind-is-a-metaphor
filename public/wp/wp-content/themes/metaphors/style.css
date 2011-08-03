@@ -1,0 +1,553 @@
+/*
+Theme Name: The Mind is a Metaphor
+Theme URI: http://metaphors.lib.virginia.edu/
+Description: Theme for TMIAM project.
+Version: 0.1
+Author: Scholars' Lab
+Author URI: http://lib.virginia.edu/scholarslab/
+Tags: grey, custom header, fixed width, two columns, widgets
+
+	Info here.
+
+*/
+
+/**
+ * $Id$
+ */
+
+/** HTML styles */
+html {
+	background-color: #C1C2B0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color:#CCC;
+	background-color:#222;
+}
+
+a{ 
+	color:#FD9;
+	text-decoration: none;
+}
+
+a:hover{ color:#D71; }
+
+/** override yui styles */
+
+#yui-main{background-color:#222;}
+
+#doc3 {
+	min-width: 750px;
+	margin: 0;
+	padding: 0;
+}
+
+#hd {
+	background: #231F20;
+}
+
+#bd {
+	background: #222 url('images/book_background.jpg') repeat fixed 0 0;
+	width: 100%;
+	
+}
+
+#resultsHeader .yui-u {
+	width: 32%;
+	font-size:80%;
+}
+
+/** header navigation styles */
+#header_nav {
+	background: #231F20;
+	color: #fff;
+	text-align: right;
+	padding: 0;
+	width: 750px;
+	margin: auto !important;
+}
+
+#header_nav ul{
+	padding: 0;
+	list-style: none;
+	margin:1em 0;
+}
+
+#header_nav ul li{
+	display: inline;
+	font-size: 1.2em;
+	padding: .2em 1em;
+	color: #9998ac;
+}
+
+#header_nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#header_nav a:hover {
+	text-decoration: underline;
+}
+
+/** image banner logo */
+#logo_band {
+	background: #9EA092;
+	height: 158px;
+	background-image: url('images/header_background.gif');
+	background-repeat: repeat-x;
+}
+
+img.logo{
+	display: block;
+	margin: auto !important;
+}
+
+/** main content */
+#main_content {
+    /* 20px padding so the contained elements don't need to worry about it*/
+    padding:20px;
+    /* real width is 750, but must adjust because of the padding above */
+	width: 710px;
+	margin: auto !important;
+	background: #333132;
+}
+
+#main_content h1, #main_content h2, #main_content h3, #main_content h4, #main_content p {
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+#main_content p {
+	line-height: 1.8em;
+	margin-left: 1.5em;
+	margin-right: 1.5em;
+	font-size: 110%;
+}
+
+#main_content h4 {
+	margin-bottom: 1.5em;
+}
+
+#metaphor_content h3.filters {
+	color: #fff;
+	margin-left: 1em;
+}
+
+#metaphor .yui-u h3 {
+	margin: 0;
+}
+
+p.attribution {
+	text-align: right;
+	font-size: .7em;
+}
+
+blockquote {
+	margin-left: 2em;
+	margin-right: 2em;
+	font-size: 1.2em;
+}
+
+#metaphor .yui-gf {
+	margin: 1em 0;
+}
+
+.remove_facet {
+	margin-left: 2em;
+	color: #fff;
+}
+
+/** search box */
+#search_box {
+	background: #292929;
+	padding: 15px;
+	color: #fff;
+	margin-bottom:1em;
+	
+}
+#search_box fieldset{margin:0;}
+
+#search_box input.text.active {
+	background: #ddeff6;
+	border: 1px solid #0099d4;
+}
+
+/*
+#searchParamsMsg a {
+	color: #DF1D2B;
+	text-decoration: none;
+}
+*/
+
+#searchParamsMsg{
+    margin-top:1em;
+}
+
+#searchParamsMsg strong{
+    font-style:italic;
+    font-weight:normal;
+	color: #B0B0B0;
+}
+
+#searchParamsMsg em {
+	color: orange;
+}
+
+fieldset.search {
+	border: none; 
+	width: 20px;
+	margin: 0 auto;
+	background: #292929;
+}
+
+.search input, .search button {
+	border: none;
+	float: left;
+}
+
+.search input {
+	color: #616161;
+	font-size: 120%;
+	width: 400px;
+	height: 25px;
+	padding: 8px 5px 2px 36px;
+	margin-right: 5px;
+	background: #fff url('images/search_48.png') no-repeat;
+}
+
+		
+#content {
+	float: right;
+	text-align: left;
+}
+
+#sidebar{
+    background-color:#292929;
+		margin-right: 20px;
+}
+
+#sidebar p {
+	/*font-family: Helvetica, Arial, sans-serif;*/
+}
+
+#sidebar ul li {
+	list-style: none;
+}
+
+ul#menu {
+    margin-top:.5em;
+    margin-left:.5em;
+}
+
+ul#menu, ul#menu ul {
+	font-family: Georgia, serif;
+	list-style: none;
+}
+
+ul#menu li {
+	list-style: none;
+}
+	
+.facet_count {
+	float: right;
+	color: #fff;
+	font-family: sans-serif;
+	margin-right: 0em;
+}
+
+.facet_count a {
+	color: #DF1D2B;
+	text-decoration: none;
+}
+
+.facet_count a:hover {
+	text-decoration: underline;
+}
+		
+ul#menu .caps {
+	text-transform: uppercase;
+} 
+		
+ul#menu .caps a {
+	color: #747273;
+	text-decoration:none;
+}
+		
+ul#menu .submenu a {
+	color: #fff;
+}
+
+ul#menu .submenu a:hover {
+	color: #9998ac;
+}
+		
+ul#menu .submenu {
+	font-size: 90%;
+}
+		
+ul#menu ul {
+	text-transform: none;
+	color: #ccc;
+	margin:1em;
+}
+
+
+
+#results {
+	color: #fff;
+}
+
+div.result{
+    padding: 15px;
+    border-top: 1px dotted #ccc;
+    padding-bottom:1em;
+}
+
+div.result p{
+	font-family: Georgia, serif;
+	letter-spacing:.05em;
+	line-height:140%;
+    color:#DDD;
+}
+
+.result a{text-decoration:none;}
+
+.result a, .result a:visited {
+	color: #fff;
+}
+
+.result a:hover {
+	color: #999A8C;
+}
+
+.right {
+	text-align: right;
+}
+
+div.container {
+	overflow: hidden;
+	width: 100%;
+}
+
+#menu .container {
+	line-height: 1.6em;
+}
+
+.post {
+	margin-left: 220px;
+}
+
+div.one-third{
+    width:33%;
+}
+
+div.left {
+	float: left;
+}
+
+div.right {
+	float: right;
+}
+
+div.center {
+	float: left;
+	text-align:center;
+}
+
+.leftText{text-align:left;}
+.rightText{text-align:right;}
+.centerText{text-align:center;}
+
+div.half{
+    width:50%;
+}
+
+.selected{
+    color:orange;
+}
+
+.details_container{
+    margin-top:.5em;
+    background-color:#777;
+    padding:.2em;
+    display:none;
+}
+
+.pagination{
+	padding-top:5px;
+	padding-bottom:5px;
+	text-align: center;
+	margin: auto !important;
+	color: #fff;
+	font-size: 105%;
+}
+
+.pagination a{
+	text-decoration: none;
+	font-size: 90%;
+}
+
+.pagination a, .pagination a:visited {
+	color: #ccc;
+}
+
+.alignedList{padding:1em; margin:0;}
+.alignedList .left {
+    width:10%;
+    text-align:right;
+}
+.alignedList .right {
+    width:90%;
+}
+
+#ft {
+	background-image: url('images/footer_background.gif');
+	background-repeat: repeat-x;
+	padding-top: 18px;
+	color: #333132;
+	height: 100px;
+	font-size: 12px;
+}
+
+#ft a, #ft a:visited {
+	color: #333132;
+	text-decoration: none;
+}
+
+#ft a:hover {
+	color: #535152;
+}
+
+#author_container {
+	width: 300px;
+	float: left;
+	display: block;
+	padding-right: 10px;
+}
+
+#author_container a {
+	text-decoration: underline !important;
+}
+
+#util_container {
+	width: 200px;
+	display: block;
+	float: right;
+	padding-right: 10px;
+	text-align: right;
+}
+
+#ft_wrap {
+	width: 740px;
+	margin: auto !important;
+	padding-top: 20px;
+}
+
+.scholars_lab_logo {
+	display: block;
+	float: right;
+	height: 60px;
+	padding-left: 10px;
+	border-left: 1px dotted #333132;
+}
+
+.scholars_lab_logo img {
+	height: 30px;
+	padding-top: 15px;
+}
+
+.copyright {
+	display: block;
+	height: 18px;
+	width: 100%;
+	padding-bottom: 2px;
+}
+
+.copyright img {
+	display: inline;
+	margin-left: 5px;
+	vertical-align: bottom;
+	height: 18px;
+}
+
+.rss{
+	display: block;
+	height: 18px;
+	padding-bottom: 2px;
+}
+
+.rss img {
+	display: inline;
+	margin-left: 5px;
+	vertical-align: bottom;
+	height: 18px;
+}
+#ft .contact{
+	display: block;
+	height: 18px;
+}
+
+#ft .contact img {
+	display: inline;
+	margin-left: 5px;
+	vertical-align: bottom;
+	height: 18px;
+}
+
+/** custom classes */
+.serif {
+	font-family: Georgia, serif;
+}
+
+#resultsForm{
+    font-size:90%;
+    margin-bottom:2em;
+}
+
+.errorList{
+    background-color:#222;
+    padding:.5em;
+}
+.errorList li{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+form fieldset>.container{
+    margin-bottom:.5em;
+}
+
+form fieldset .container .left{
+    width:25%;
+}
+
+form fieldset .container .right{
+    width:73%;
+    text-align:left;
+}
+
+#simple_captcha .left{
+    width:30%;
+}
+#simple_captcha .right{
+    width:65%;
+}
+
+.delete {
+	color: red;
+}
+
+.active {
+	background: #616161;
+}
+
+.navigation {
+	height: 20px;
+}
+.navigation div {
+	float: left;
+	width: 230px;
+	text-align: center;
+}

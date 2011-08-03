@@ -1,0 +1,78 @@
+<% if @work %>
+	 <h3><%= link_to 'Create New', new_admin_work_metaphor_path(@work) %></h3>
+<% else %>
+	<em class="note">
+		Metaphors can only be created by browsing to a single Work
+	</em>
+<% end %>
+
+<p>
+	<% if @author %>
+	Showing Metaphors for author: "<%= link_to @author.name_with_dates, admin_author_path(@author) %>"
+	<% elsif @work %>
+	Showing Metaphors for Work: "<%= link_to @work.title, admin_work_path(@work) %>"
+	<% else %>
+	All Metaphors
+	<% end %>
+</p>
+
+<%= render 'admin/search_sort' %>
+
+<%= will_paginate @metaphors %>
+
+<table class="grid">
+	
+	<tr>
+		<th>Metaphor</th>
+		<th>Work</th>
+		<th>Author</th>
+		<th>Action</th>
+	</tr>
+	
+	<% @metaphors.each do |metaphor| %>
+		
+		<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+			
+			<td class="label"><%= link_to truncate(metaphor.metaphor, :length=>100), admin_metaphor_path(metaphor) %></td>
+			
+			<td class="record_option">
+				<% if metaphor.work %>
+					<%= link_to truncate(metaphor.work.title, :length=>40), admin_work_path(metaphor.work) %>
+				<% else %>
+					No Associated Work
+				<% end %>
+			</td>
+			
+			<td class="record_option">
+				<% if metaphor.work and ! metaphor.work.authors.empty? %>
+					<% metaphor.work.authors[0..1].each do |author| %>
+						<%= link_to author.name_with_dates, admin_author_path(author) -%>
+						<br/>
+					<% end -%>
+					<% if metaphor.work.authors[2] %>
+						<a class="expand_works_link">(more)</a>
+						<div class="expand_works_div_hidden" style="display:none">
+							<% metaphor.work.authors[2..-1].each_with_index do |author,index| %>
+								<%= link_to author.name_with_dates, admin_author_path(author) -%>
+								<br/>
+							<% end %>
+						</div>
+					<% end %>
+				<% else %>
+					No Associated Authors
+				<% end %>
+			</td>
+			
+			<td class="record_option">
+				<div><%= link_to 'Edit', edit_admin_metaphor_path(metaphor) %></div>
+				<div>
+					<%= link_to 'Destroy', admin_metaphor_path(metaphor), :confirm => 'Are you sure you want to delete this record?', :method => :delete %>
+				</div>
+			</td>
+		
+		</tr>
+	
+	<% end %>	
+</table>
+
+<%= will_paginate @metaphors %>

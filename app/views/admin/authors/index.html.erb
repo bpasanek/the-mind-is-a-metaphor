@@ -1,0 +1,40 @@
+<h3><%= link_to 'Create New', new_admin_author_path %></h3>
+
+<%= render 'admin/search_sort' %>
+
+<%= will_paginate @authors %>
+
+<table class="grid">
+	<tr>
+		<th>Author</th>
+		<th>Works</th>
+		<th>Action</th>
+	</tr>
+	<% @authors.each do |author| %>
+	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>" >
+	    <td><%= link_to author.name_with_dates, admin_author_path(author) %></td>
+ 		<td>
+	    		<% author_link_items = [] -%>
+ 			<% author.works[0..4].each_with_index do |a,index| %>
+				<%= link_to truncate(a.title, :length=>50), admin_work_path(a) -%>
+				<br/>
+			<% end %>
+			<% if author.works[5] %>
+				<a class="expand_works_link">(more)</a>
+				<div class="expand_works_div_hidden" style="display:none">
+		 			<% author.works[5..-1].each_with_index do |a,index| %>
+						<%= link_to truncate(a.title, :length=>50), admin_work_path(a) -%>
+						<br/>
+					<% end %>
+				</div>
+			<% end %>
+		</td>
+		<td class="record_option">
+			<div><%= link_to "Edit", edit_admin_author_path(author) %></div>
+			<div><%= link_to "Destroy", admin_author_path(author), :confirm => 'Are you sure?', :method => :delete %></div>
+		</td>
+	</tr>
+	<% end %>
+</table>
+
+<%= will_paginate @authors %>

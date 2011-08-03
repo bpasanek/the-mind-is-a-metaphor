@@ -1,0 +1,72 @@
+<%= f.error_messages %>
+
+<div>
+	<label>Name:</label> <%= f.text_field :name %>
+</div>
+
+<div>
+	<label>Last Name:</label> <%= f.text_field :last_name %>
+</div>
+
+<div>
+	<label>First Name:</label> <%= f.text_field :first_name %>
+</div>
+
+<div>
+	<label>Gender:</label> <%= f.select :gender, gender_list %>
+</div>
+
+<div>
+	<label>Date of Birth:</label> <%= f.text_field :date_of_birth %>
+</div>
+
+<div>
+	<label>Date of Death:</label> <%= f.text_field :date_of_death %>
+</div>
+
+<div>
+	<label>Occupation:</label> 
+	<%= f.select :occupation_id, occupation_list, :include_blank => true %>
+</div>
+
+<div>
+	<label>Religion:</label> 
+	<!-- f.select :religion_id, religion_list -->
+	<select name="author[religion_id]" id="author_religion_id">
+		<optgroup><option></option></optgroup>
+		<%= option_groups_from_collection_for_select(
+			group_selection_list_for('Religion'),
+			:options,
+			:grouping, # <- grouping
+			:id,
+			:name, # <- item
+			@author.religion_id
+		) %>
+	</select> 
+</div>
+
+<div>
+	<label>Politics:</label> 
+	<!-- f.select :politic_id, politic_list -->
+	<select name="author[politic_id]" id="author_politic_id">
+		<optgroup><option></option></optgroup>
+		<%= option_groups_from_collection_for_select(
+			group_selection_list_for('Politic'),
+			:options,
+			:grouping, # <- grouping
+			:id,
+			:name, # <- item
+			@author.politic_id
+		) %>
+	</select> 
+</div>
+
+<div>
+	<label>Nationality:</label>
+	<%= f.select :nationality_id, nationality_list, :include_blank => true %>
+</div>
+
+<div>
+	<label>Notes:</label>
+	<%= f.text_area :notes, :rows => 5, :cols => 50 %>
+</div>

@@ -1,0 +1,16 @@
+<div class="top_nav"><%= link_to 'Show', admin_occupation_path(@occupation) %> |
+<%= link_to 'Back', admin_occupations_path %></div>
+
+<h1>Editing occupation</h1>
+
+<% form_for(@occupation, :url => {:action => :update}) do |f| %>
+  
+  <%= render 'form_fields', :f=>f %>
+	
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<div class="bottom_nav"><%= link_to 'Show', admin_occupation_path(@occupation) %> |
+<%= link_to 'Back', admin_occupations_path %></div>

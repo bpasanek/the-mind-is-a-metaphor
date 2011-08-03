@@ -1,0 +1,16 @@
+<div class="top_nav"><%= link_to 'Show', admin_metaphor_path(@metaphor) %> |
+<%= link_to 'Back', admin_metaphors_path %></div>
+
+<h1>Editing metaphor</h1>
+
+<% form_for(setup_metaphor(@metaphor), :url => {:action => :update}) do |f| %>
+  
+  <%= render 'form_fields', :f=>f %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<div class="bottom_nav"><%= link_to 'Show', admin_metaphor_path(@metaphor) %> |
+<%= link_to 'Back', admin_metaphors_path %></div>

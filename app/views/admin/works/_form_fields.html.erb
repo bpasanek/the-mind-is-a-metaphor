@@ -1,0 +1,65 @@
+<% if @author -%>
+	<input type="hidden" name="work[author_works_attributes][0][author_id]" value="<%= h @author.id %>" />
+<% end -%>
+
+<%= f.error_messages %>
+
+<div style="display:table;">
+	
+	<div class="new_record_column">
+		<h2>Bibliographic Information</h2>
+		<div>
+			<label>Title:</label>
+			<%= f.text_field :title %>
+		</div>
+		<div>
+			<label>Year:</label>
+			<%= f.text_field :year %>
+		</div>
+			<div>
+			<label>Integer Year:</label>
+			<%= f.text_field :year_integer %>
+		</div>
+			<div>
+			<label>Printer:</label>
+			<%= f.text_area :printer, :rows => 2, :cols => 36 %>
+		</div>
+			<div>
+			<label>Place of Publication:</label>
+			<%= f.text_area :place_of_publication, :rows => 2, :cols => 36 %>
+		</div>
+			<div>
+			<label>Citation:</label>
+			<%= f.text_area :citation, :rows => 5, :cols => 36 %>
+		</div>
+			<div>
+			<label>Composed:</label>
+			<%= f.text_area :composed, :rows => 3, :cols => 36 %>
+		</div>
+			<div>
+			<label>Notes:</label>
+			<%= f.text_area :notes, :rows => 5, :cols => 36 %>
+		</div>
+	</div>
+	
+	<div class="new_record_column">
+			<h2>Genres</h2>
+			<p>A value can represent a single term or a hierarchy of terms. When specifying a hierarchy, please use <em>::</em> to separate each term in the hierarchy.</p>
+			<div id="genreList">
+			<% f.fields_for :genres do |genre_form| %>
+				<div>
+					<%= genre_form.label :value, 'Value:' %>
+					<%= genre_form.text_field :value, :size => 40%>
+					<% unless genre_form.object.new_record? -%>
+		<%#= genre_form.label :_delete, 'Delete?' %>
+		<%#= genre_form.check_box :_delete %>
+		<%= genre_form.label :_destroy, 'Delete?' %>
+		<%= genre_form.check_box :_destroy %>
+					<% end -%>
+				</div>
+			<% end %>
+			</div>
+			<%= button_to_function "Add another", "addAnotherWorkGenre()" %>
+	</div>
+	
+</div>

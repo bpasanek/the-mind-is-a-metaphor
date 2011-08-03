@@ -1,0 +1,49 @@
+<h4>Contact Us</h4>
+
+<% unless @errors.empty? %>
+	<strong>Please fix the following errors:</strong>
+	<ul class="errorList">
+	<% @errors.each do |msg| %>
+		<li><%= h msg %></li>
+	<% end %>
+	</ul>
+<% end %>
+
+<% form_tag do %>
+	
+	<fieldset>
+		<div class="container">
+		  <div class="left rightText"><%= label_tag :name %></div>
+		  <div class="right"><%= text_field_tag :name, params[:name] %></div>
+		</div>
+		
+		<div class="container">
+		    <div class="left rightText"><%= label_tag :address, "Your Email Address" %></div>
+		    <div class="right"><%= text_field_tag :address, params[:address] %></div>
+		</div>
+		
+		<div class="container">
+		    <div class="left rightText"><%= label_tag :subject, "Subject" %></div>
+		    <div class="right"><%= text_field_tag :subject, params[:subject] %></div>
+		</div>
+	
+		<div class="container">
+		    <div class="left rightText"><%= label_tag :body, "Your Message" %></div>
+		    <div class="right"><%= text_area_tag :body, params[:body], :rows => 8, :cols => 50 %></div>
+		</div>
+	
+		<div class="container">
+		  <div class="left rightText">Text from the image</div>
+		  <div class="right">
+				<%= show_simple_captcha :image_style=>'embosed_silver' %>
+			</div>
+		</div>
+	
+		<div class="container">
+			<div class="left rightText">&nbsp;</div>
+		  <div class="right">
+		    <%= submit_tag "Submit" %>
+			</div>
+		</div>
+	</fieldset>
+<% end %>

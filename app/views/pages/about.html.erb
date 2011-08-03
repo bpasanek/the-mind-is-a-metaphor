@@ -1,0 +1,121 @@
+<h4>About the Database</h4>
+
+<p><em>The Mind is a Metaphor</em>, is an evolving work of
+reference, an ever more interactive, more solidly constructed collection of mental
+metaphorics. This collection of eighteenth-century metaphors of mind
+serves as the basis for a scholarly study of the metaphors and root-images
+appealed to by the novelists, poets, dramatists, essayists, philosophers, belle-lettrists, preachers, and pamphleteers of the long eighteenth century. While the
+database does include metaphors from classical sources, from Shakespeare
+and Milton, from the King James Bible, and from more recent texts, it does not
+pretend to any depth or density of coverage in literature other than
+that of the British eighteenth century.</p>
+
+<p>&#9758; The database was assembled and taxonomized and is maintained by <a href="http://www.engl.virginia.edu/faculty/pasanek_brad.shtml">Brad Pasanek</a></p>
+
+<p>The database supports keyword searching and faceted browsing. The facets are explained <a href="http://metaphors.lib.virginia.edu/facets_about">here</a>. If you're interested in "fancy searching" (boolean syntax, proximity searches, etc.), you might read about Lucene's <a href="http://lucene.apache.org/java/2_3_2/queryparsersyntax.html">Query Parser Syntax</a>.</p>
+
+<p>An original bulk of metaphors was collected during Brad Pasanek's graduate school career in the English department at Stanford University. An early version of this database, built in Filemaker, served as the basis for his dissertation titled, <em>Eighteenth-Century Metaphors of Mind, A Dictionary</em>. Stanford: 2006.</p>
+
+<p>I/Brad continue to add to the database and edit entries. I enter new metaphors that are sent to me by email and credit contributors. In 2008 and 2009, Suzanne Morgen, my research assistant at the University of Virginia, proved a particularly tireless editor, contributing new metaphors and editing hundreds of old ones. In spite of Suzanne's excellent work, one should be aware that not all entries are complete and that the database remains a work in progress. My typos and mistakes remain mixed in with the more recently edited entries. For years, I've edited entries as I compile, but I don't catch all my mistakes – and I make a lot of mistakes.</p>
+
+<p>When I began this project at Stanford, Matt Jockers helped me plan the structure of the original database. Matt, Nicole Coleman, Glenn Worthy, and Jeremy Sabol all provided invaluable technical support and advice during these grad-school years. When I left Stanford in 2006 for the University of Southern California, I met a USC undergraduate named Casey Stark — a whiz and a credit to research assistants everywhere! — who freed
+the metaphors from their original Filemaker format and helped me build a new relational database in MySQL. For a year or two I tried tweaking and building on top of Casey's PHP-MySQL assemblage but found I was not equal to the task.</p>
+
+<p>Now that I've happily landed  at the University of Virginia, the database has shed its PHP scripts and been reinvented in a Ruby-on-Rails framework. Not long after I arrived in Charlottesville, Bethany Nowviskie set in motion an impressive programming effort involving Jack Kelly, Matt Mitchell, and Wayne Graham at UVa's Scholars' Lab. Wayne and Matt  helped me reimagine my database. I am delighted. Wayne Graham, in particular, patiently initiated me into the workings of Ruby, Solr, and Subversion. I am apoplectic with gratitude.</p>
+
+<p>There are many strange and surprising metaphors in the database; please do go looking for them. In March of 2006, I launched a <a href="http://mind.textdriven.com/">blog-like
+site</a> of short explications of my favorite metaphors. I'll add to those pages as I continue working with the database, fishing out especially interesting metaphors of mind. In the future I hope to integrate better these explicative pages and the database, so that my visitors
+can move back and forth between metaphor and mini-essay,
+evidence and claim.
+
+<hr/><h4>On the Contents of the Database</h4>
+<p>There are 7,830 metaphors in the database as of January 5th, 2010. I've hundreds more marked in books and scribbled on notecards, and I am typing those up -- slowly, surely. It's much easier to cut and paste.</p>
+<p>I haven't completed all of my planned searches, and my original protocol may be classified as "hunt-and-peck." But for the past two years I've been collaborating with
+<a href="http://www.eecs.tufts.edu/~dsculley/">D. Sculley</a>, formerly of Tufts University's Department of Computer Science and now at Google Pittsburgh.
+Employing machine-learning methods, we have trained
+a computer to correctly label metaphors and non-metaphors. Our experiments suggest we may be able to automate much of my daily drudgery by using a classifier trained on a seed set of 100-200 labeled metaphors and non-metaphors. This hand-curated database of metaphors would then be put to work in bootstrapping efforts, repurposed as training data for automated classifiers sent forward and backward in history,
+departing from the eighteenth century in order to collect Renaissance and Victorian metaphors.</p>
+<p>Should we eventually build an automated metaphor-classifier and charge it with exploring
+the great unread collections of electronic literature, I would be more confident in presenting a statistical picture of eighteenth-century discourse. In the meantime we have been conducting experiments and presenting papers on machine
+learning and literary studies, making the rounds at conferences in the digital humanities. Two papers we've written have been published in Oxford's <em><a href="http://llc.oxfordjournals.org/">Literary and Linguistic Computing</a></em>.</p>
+
+<p>At present I still spend a fair amount of time conducting proximity
+searches for two character strings. I search one term from a set list
+("mind," "heart," "soul," "thought," "idea," "imagination," "fancy,"
+"reason," "passion," "head," "breast," "bosom," or "brain") against
+another word that I hope will prove metaphorical. For example, I
+search for "mind" within one hundred characters of "mint" and find the
+following couplet in William Cowper's poetry:</p>
+
+<dl>
+
+<dd>"The
+<b>mind</b> and conduct mutually imprint</dd>
+<dd>And stamp their image in
+each other's <b>mint</b>."</dd></dl>
+
+<p>What follows is a rough breakdown of the database's contents:</p>
+<dl>
+<dt>Provenance (last updated June, 2007)</dt>
+	<dd>More than 5,980 of the metaphors were found keyword searching Chadwyck-Healey through Stanford's <a href="http://www-sul.stanford.edu/depts/hasrg/hdis/text-brit.html">HDIS</a> interface</dd>
+	<dd>783 metaphors are from my Orals reading or date from my first six months of collection</dd>
+	<dd>1,292 I've encountered while reading since then</dd>
+
+	<dd>417 were found browsing in Eighteenth-Century Collections Online (<a href="http://www.gale.com/EighteenthCentury/">ECCO</a>)</dd>
+	<dd>218 were found keyword searching the Liberty Fund's Online Library of Liberty (<a href="http://oll.libertyfund.org/Home3/index.php">OLL</a>)</dd>
+	<dd>188 were found keyword searching the Intelex <a href="http://library.nlx.com/">Past Masters</a> database</dd>
+	<dd>180 are from Roger Lonsdale's <em>Eighteenth-Century Women
+		Poets</em>. Oxford: OUP, 1989. </dd>
+
+	<dd>150 are from the King James Bible (<a href="http://etext.virginia.edu/kjv.browse.html">UVA edition</a>)</dd>
+	<dd>67 were taken from Johnson's <em>Dictionary</em></dd>
+	<dd>51 were found browsing in Early English Books Online (<a href="http://eebo.chadwyck.com">EEBO</a>)</dd>
+	<dd>27 are from the <em>Oxford English Dictionary</em> (<a href="http://dictionary.oed.com/">OED</a>)</dd>
+	<dd>21 are from Ad Fontes Digital Library of Classic Protestant Texts</dd>
+
+</dl>
+
+<dl>
+<dt>Some Rubrics (last updated January 5, 2010)</dt>
+	<dd>294 Animal entries</dd>
+	<dd>564 Architecture entries</dd>
+	<dd>854 Body entries</dd>
+	<dd>241 Garden entries</dd>
+	<dd>1,113 Government entries*</dd>
+	<dd>275 Liquid entries</dd>
+	<dd>742 Mineral entries*</dd>
+	<dd>257 Optics entries</dd>
+	<dd>465 Population entries</dd>
+	<dd>135 Visual Arts entries</dd>
+	<dd>431 War entries*</dd>
+	<dd>220 Weather entries</dd>
+	<dd>602 Writing entries*</dd>
+	<dd>1,344 Miscellaneous or "Uncategorized" entries</dd>
+</dl>
+
+<p>I've done in-depth proximity searches for Government, Mineral, War,
+and Writing metaphors. These categories are marked with an asterisk in
+the list above.</p>
+
+<hr/><h4>Abstract</h4> <p>In my
+current book project, <em>Eighteenth-Century Metaphors of Mind, A
+Dictionary</em>, I analyze a collection of over 8,000 metaphors that
+I've assembled from various electronic and traditional sources. I
+consider the tacit assumption, shared by a variety of scholars, that
+changing metaphors are indicative--if not productive or constitutive--of
+broader cultural change. In contrast, my research makes clear that, with
+few important exceptions, metaphors of mind in the eighteenth century
+display astonishing persistence in the face of Enlightenment ferment and
+revolutionary change.</p> <p>I am keenly interested in digital innovations in
+humanities research. But I am also a student of the history of the book.
+Technology enables my approach to discourse, but I remain situated in the longer tradition of philology and intellectual history. To best accommodate my material, I've structured my book as a
+dictionary or encyclopedia. There are no chapters in the manuscript,
+and I aim to shift my reader's focus from authors and texts to tropes
+and usages. Instead of chapters, I compose entries of five to twenty
+pages in length. In each entry I make local arguments about fancy's
+coinage, reason's empire, the court of conscience, strangers within, the
+mind's eye, a soldier's "mettle" or "metal," and so forth. Even the most
+unlikely metaphors have careers: the mind is once likened to meat
+rotating on a smoke-jack in the <em>Memoirs of Martinus Scriblerus</em>
+
+and then again in <em>Tristram Shandy</em>.</p>

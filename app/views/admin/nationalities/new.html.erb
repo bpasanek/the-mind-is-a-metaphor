@@ -1,0 +1,14 @@
+<div class="top_nav"><%= link_to 'Back', admin_nationalities_path %></div>
+
+<h1>New nationality</h1>
+
+<% form_for(@nationality, :url => {:action => :create}) do |f| %>
+  
+  <%= render 'form_fields', :f=>f %>
+	
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<div class="bottom_nav"><%= link_to 'Back', admin_nationalities_path %></div>

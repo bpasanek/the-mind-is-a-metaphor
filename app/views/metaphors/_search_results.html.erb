@@ -1,0 +1,30 @@
+<% @solr_response.docs.each_with_index do |doc,i| %>
+	
+	<div class="result">
+		
+		<% if !doc[:work_year].to_s.blank? %>
+		<p><strong>Date:</strong> <%= doc[:work_year] %></p>
+		<% end %>
+		
+		<p><%= truncate(doc[:metaphor], :length=> 300) %></p>
+		
+		<blockquote>
+			<% if doc[:author_name] %>
+				<% doc[:author_name].each do |author| %>
+					<p class="attribution">&mdash; <%= author %></p>
+				<% end %>
+			<% end %>
+		</blockquote>
+		
+		<%= link_to 'preview', metaphor_path(doc[:id]), :class=>'load_details' %>
+		 | 
+		<%= link_to(
+			'full record',
+			metaphor_path(doc[:id]),
+			:title=>doc[:work_title])
+		%> 
+		
+		<div class="details_container"></div>
+	</div>
+	
+<% end %>

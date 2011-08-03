@@ -1,0 +1,44 @@
+<% unless params[:q].blank? and params[:f].blank? %>
+
+Your search for
+
+	<% unless params[:q].blank? %>
+		<em>"<%= params[:q] %>"</em> 
+		<% link_to metaphors_path(params.merge(:q=>nil)) do %>
+		<%= image_tag 'cancel_16.png' %>
+		<% end %>
+	<% end %>
+
+	<% if params[:q] and params[:f] %> AND <% end %>
+
+	<% if params[:f] %>
+		<% sets = [] %>
+		<% params[:f].each_pair do |k,v| %>
+			<% sets << capture do %>
+				<strong><%= h facet_label(k) %></strong>: 
+				<% set_values = [] %>
+				<% v.each do |vv| %>
+					<% set_values << capture do %>
+						<em>"<%= vv %>"</em> <% link_to(remove_facet_param(k,vv), :class=>'delete') do %>
+						<%= image_tag 'cancel_16.png'%>
+						<% end %>
+					<% end %>
+				<% end %>
+				<%= set_values.join(', ') %>
+			<% end %>
+		<% end %>
+		<%= sets.join(' AND ') %>
+	<% end %>
+
+	returned <%= @solr_response.total %> results(s) in <%=  number_with_precision(@solr_response.header[:QTime].to_f/1000, :precision => 3) %> seconds
+	
+		<p class="right">
+		
+			<% link_to params.merge(:format=>:csv) do %>
+			<%= image_tag 'doc_csv_icon.png', :alt=>"CSV", :title=>"Download Page Results as CSV", :size=> "25x25" %>
+			<% end %>
+		</p>
+	
+<% else %>
+	Showing all records.
+<% end %>

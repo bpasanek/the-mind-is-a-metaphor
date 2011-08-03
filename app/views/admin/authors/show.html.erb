@@ -1,0 +1,70 @@
+<div class="top_nav">
+	<%= link_to 'Edit', edit_object_path(@author) %> | <%= link_to 'Back', collection_path %>
+</div>
+
+<h1>Showing Author: "<%= @author.name %>"</h1>
+
+<h2>Descriptive Information</h2>
+<div class="show_section">
+	<div class="entry">
+		<span class="label">Name:</span>
+		<div class="description"><%= @author.name %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Last Name:</span>
+		<div class="description"><%= @author.last_name %></div>
+	</div>
+	<div class="entry">
+		<span class="label">First Name:</span>
+		<div class="description"><%= @author.first_name %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Gender:</span>
+		<div class="description"><%= @author.gender %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Date of Birth:</span>
+		<div class="description"><%= @author.date_of_birth %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Date of Death:</span>
+		<div class="description"><%= @author.date_of_death %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Occupation:</span>
+		<div class="description"><%= value_or_default @author, :occupation, :name %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Religion:</span>
+		<div class="description"><%= value_or_default @author, :religion, :name %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Politics:</span>
+		<div class="description"><%= value_or_default @author, :politic, :name %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Nationality:</span>
+		<div class="description"><%= value_or_default @author, :nationality, :name %></div>
+	</div>
+	<div class="entry">
+		<span class="label">Notes:</span>
+		<div class="description"><%= @author.notes %></div>
+	</div>
+</div>
+
+<h2>Works</h2>
+<div class="show_section">
+	<%= link_to 'View All', admin_author_works_path(@author) %> | 
+	<%= link_to "Add New", new_admin_author_work_path(@author) %>
+</div>
+
+<h2>Metaphors</h2>
+<div class="show_section">
+	<%= link_to 'View All', admin_author_metaphors_path(@author) %>
+</div>
+
+<%= render 'admin/created_updated' %>
+
+<div class="bottom_nav">
+	<%= link_to 'Edit', edit_object_path(@author) %> | <%= link_to 'Back', collection_path %>
+</div>
