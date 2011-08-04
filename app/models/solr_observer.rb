@@ -1,4 +1,3 @@
-#
 # See ActiveRecord::Observer
 # http://api.rubyonrails.org/classes/ActiveRecord/Observer.html
 #
@@ -10,13 +9,13 @@
 #   when a metaphor object is deleted, the associated solr doc is deleted
 #   when a non-metaphor object is deleted, the associated solr doc is updated
 class SolrObserver < ActiveRecord::Observer
-  
+
   cattr_accessor :indexing
-  self.indexing = true  
-  
+  self.indexing = true
+
   # mixin for each metaphor instance
   module SolrizableMetaphor
-    
+
     # field is an attribute on a work.author(s) object.
     # returns an array of values based on the author "field" value.
     # the field values are split on "and" and ","
@@ -37,7 +36,7 @@ class SolrObserver < ActiveRecord::Observer
       end
       [names.compact.uniq, ids.compact.uniq]
     end
-    
+
     # packages up all of the "work" fields into a simple hash for solr
     def works_to_solr
       base = {}
@@ -55,7 +54,7 @@ class SolrObserver < ActiveRecord::Observer
       base[:work_notes]                 = work ? work.notes : nil
       base
     end
-    
+
     # packages up all of the "authors" into a simple hash for solr
     def authors_to_solr
       base = {}
@@ -70,13 +69,11 @@ class SolrObserver < ActiveRecord::Observer
       base[:author_religion], base[:author_religion_ids]        = work ? extract_author_field_values(:religion) : nil
       base
     end
-    
+
     # flattens the metaphor object graph for solr consumption
     def to_solr
       base = {
         :id             => self.id,
-        :metaphor       => self.metaphor,
-        :categories     => self.categories.map{|c|c.value.split('::').first}.uniq, # classifiable,
         :category_ids   => self.categories.map{|c|c.id},
         :types          => self.types.map{|c|c.name}.uniq,
         :type_ids       => self.types.map{|c|c.id}
@@ -84,9 +81,9 @@ class SolrObserver < ActiveRecord::Observer
       base.merge!(works_to_solr)
       base.merge!(authors_to_solr)
     end
-    
+
   end
-  
+
   # the objects to observe -- part of ActiveRecord::Observer
   observe [
     :author,
@@ -99,7 +96,7 @@ class SolrObserver < ActiveRecord::Observer
     :type,
     :work
   ]
-  
+
   # after any of the observed objects are saved, fetch their associated metaphor objects
   # and create solr docs, post and commit
   # ActiveRecord::Observer
@@ -107,7 +104,7 @@ class SolrObserver < ActiveRecord::Observer
     logger.info "SolrObserver: A #{object.class} was just saved! Updating #{object.metaphors.size} solr documents..."
     update_solr(object)
   end
-  
+
   # after an object has been destroy, find its associated metaphor(s)
   # if the object is a metaphor, remove the solr document
   # if the object is not a metaphor, find the existing solr document,
@@ -121,9 +118,9 @@ class SolrObserver < ActiveRecord::Observer
       update_solr object
     end
   end
-  
+
   protected
-  
+
   # "object" - one of the object types being observered.
   # calls the #metaphors object on the object,
   # loops through each metaphor, calling to_solr for each.
@@ -136,7 +133,7 @@ class SolrObserver < ActiveRecord::Observer
       end
     end.compact
   end
-  
+
   # adds the result of create_solr_docs_from_object to solr
   # sends a commit to solr
   def update_solr(object)
@@ -147,7 +144,7 @@ class SolrObserver < ActiveRecord::Observer
     MIAM.solr.add docs
     MIAM.solr.commit
   end
-  
+
   # deletes a metaphor from solr
   # "object" == instance of Metaphor
   def delete_from_solr(object)
@@ -155,16 +152,16 @@ class SolrObserver < ActiveRecord::Observer
     solr.delete_by_query("id:#{object.id}")
     solr.commit
   end
-  
+
   # boolean flag
   def index?
-    RAILS_ENV=='test' || SolrObserver.indexing
+    Rails.env == 'test' || SolrObserver.indexing
   end
-  
+
   # shortcut to the main solr connection
   def solr; MIAM.solr end
-  
+
   # shortcut to the logger
   def logger; Rails.logger end
-  
+
 end
